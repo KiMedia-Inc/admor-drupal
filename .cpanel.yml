@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - /usr/local/bin/php -v
+    - composer install --no-dev
