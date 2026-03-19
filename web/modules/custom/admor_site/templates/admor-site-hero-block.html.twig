@@ -1,0 +1,34 @@
+<div class="admor-hero__panel">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <div>
+      <div class="admor-card__eyebrow">{{ 'Product spotlight'|t }}</div>
+      <h3 class="mb-0">{{ 'Newest product logos'|t }}</h3>
+    </div>
+    <a href="/products" class="btn-main btn-light-trans">{{ 'Browse all'|t }}</a>
+  </div>
+
+  {% if items %}
+    <div class="swiper admor-product-logo-swiper">
+      <div class="swiper-wrapper">
+        {% for product in items %}
+          <div class="swiper-slide">
+            <a class="admor-product-logo" href="{{ product.url }}">
+              <img src="{{ product.image ?: theme_path ~ '/vendor/coolair/images/logo/' ~ ((loop.index % 6) + 1) ~ '.webp' }}" alt="{{ product.title }}">
+              <div>
+                <h5 class="mb-1">{{ product.title }}</h5>
+                {% if product.summary %}
+                  <p class="mb-0">{{ product.summary }}</p>
+                {% endif %}
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  {% else %}
+    <div class="admor-empty">{{ 'Add published Products content with Logo image and Web link to populate the hero carousel.'|t }}</div>
+  {% endif %}
+</div>

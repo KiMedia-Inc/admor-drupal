@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - admor_site
+  theme:
+    - admor
+id: admor_homepage_specials
+theme: admor
+region: homepage_specials
+weight: 0
+provider: null
+plugin: admor_site_homepage_specials
+settings:
+  id: admor_site_homepage_specials
+  label: 'Admor Homepage Specials'
+  label_display: '0'
+  provider: admor_site
+visibility: {  }

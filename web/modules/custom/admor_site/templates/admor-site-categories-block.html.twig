@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-lg-6 offset-lg-3 text-center admor-section-head">
+    <div class="subtitle bg-color-3 mb-3">{{ 'Product categories'|t }}</div>
+    <h2>{{ 'Find products by trade and application'|t }}</h2>
+    <p class="lead">{{ 'Use Product Categories to steer contractors into the right inventory faster.'|t }}</p>
+  </div>
+</div>
+
+{% if items %}
+  <div class="admor-taxonomy-grid">
+    {% for category in items %}
+      <article class="admor-taxonomy-card">
+        <div class="admor-card__eyebrow">{{ 'Category'|t }}</div>
+        <h4><a href="{{ category.url }}">{{ category.title }}</a></h4>
+        <p>{{ 'Use this landing page to surface products, specials, and content tied to this line.'|t }}</p>
+        <a class="btn-main btn-light-trans mt-2" href="{{ category.url }}">{{ 'View category'|t }}</a>
+      </article>
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="admor-empty">{{ 'No Product Categories terms are available yet.'|t }}</div>
+{% endif %}

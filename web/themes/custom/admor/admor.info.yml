@@ -1,0 +1,23 @@
+name: Admor
+type: theme
+description: 'Custom Drupal theme for Admor HVAC Distribution based on the CoolAir homepage-6 template.'
+package: Custom
+core_version_requirement: ^11
+libraries:
+  - admor/global
+regions:
+  top_bar: 'Top Bar'
+  header: 'Header'
+  navigation: 'Navigation'
+  hero: 'Hero'
+  homepage_cta: 'Homepage CTA'
+  homepage_categories: 'Homepage Categories'
+  homepage_news: 'Homepage News'
+  homepage_specials: 'Homepage Specials'
+  homepage_training: 'Homepage Training'
+  homepage_staff: 'Homepage Staff'
+  homepage_testimonials: 'Homepage Testimonials'
+  homepage_videos: 'Homepage Videos'
+  content: 'Content'
+  footer_main: 'Footer Main'
+  footer_bottom: 'Footer Bottom'

@@ -1,0 +1,42 @@
+admor_site.settings:
+  type: config_object
+  label: 'Admor site contact settings'
+  mapping:
+    phone:
+      type: string
+      label: 'Phone'
+    email:
+      type: string
+      label: 'Email'
+    hours:
+      type: string
+      label: 'Hours'
+    location:
+      type: string
+      label: 'Location'
+    topbar_note:
+      type: string
+      label: 'Topbar note'
+    footer_summary:
+      type: text
+      label: 'Footer summary'
+
+admor_site.menu:
+  type: config_object
+  label: 'Admor menu manifest'
+  mapping:
+    links:
+      type: sequence
+      label: 'Links'
+      sequence:
+        type: mapping
+        mapping:
+          title:
+            type: string
+            label: 'Title'
+          uri:
+            type: string
+            label: 'URI'
+          target:
+            type: string
+            label: 'Target'

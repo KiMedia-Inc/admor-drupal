@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - admor_site
+  theme:
+    - admor
+id: admor_hero
+theme: admor
+region: hero
+weight: 0
+provider: null
+plugin: admor_site_homepage_hero
+settings:
+  id: admor_site_homepage_hero
+  label: 'Admor Homepage Hero'
+  label_display: '0'
+  provider: admor_site
+visibility: {  }

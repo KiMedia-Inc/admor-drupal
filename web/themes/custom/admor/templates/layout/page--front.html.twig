@@ -1,0 +1,287 @@
+<div id="wrapper" class="admor-page-shell">
+  {% include '@admor/includes/site-header.html.twig' %}
+
+  <main id="main-content" class="admor-page-content">
+    <div class="no-bottom no-top" id="content">
+      <div id="top"></div>
+
+      <section class="admor-hero">
+        <div class="container">
+          <div class="row align-items-center g-4 gx-5">
+            <div class="col-lg-6 admor-hero__copy">
+              <div class="subtitle bg-color-3 mb-3">Complete Solutions</div>
+              <h1>Hawaii's HVAC superstore for products, training, specials, and support.</h1>
+              <p>
+                Admor HVAC Distribution connects contractors across Oahu, Maui, and Kona with premium brands, technical support,
+                rebate opportunities, and hands-on training.
+              </p>
+              <div class="spacer-10"></div>
+              <a class="btn-main" href="/products">{{ 'Discover Products'|t }}</a>
+
+              <div class="admor-hero__stats">
+                <div class="admor-hero__stat">
+                  <strong>3</strong>
+                  <span>{{ 'Island branches'|t }}</span>
+                </div>
+                <div class="admor-hero__stat">
+                  <strong>{{ admor_home.hero_products|length }}</strong>
+                  <span>{{ 'Featured product logos'|t }}</span>
+                </div>
+                <div class="admor-hero__stat">
+                  <strong>{{ admor_home.training|length }}</strong>
+                  <span>{{ 'Upcoming trainings'|t }}</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              {% if page.hero %}
+                {{ page.hero }}
+              {% else %}
+                <div class="admor-hero__panel">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                      <div class="admor-card__eyebrow">{{ 'Product spotlight'|t }}</div>
+                      <h3 class="mb-0">{{ 'Newest product logos'|t }}</h3>
+                    </div>
+                    <a href="/products" class="btn-main btn-light-trans">{{ 'Browse all'|t }}</a>
+                  </div>
+
+                  {% if admor_home.hero_products %}
+                    <div class="swiper admor-product-logo-swiper">
+                      <div class="swiper-wrapper">
+                        {% for product in admor_home.hero_products %}
+                          <div class="swiper-slide">
+                            <a class="admor-product-logo" href="{{ product.url }}">
+                              <img src="{{ product.image ?: admor_theme_path ~ '/vendor/coolair/images/logo/' ~ ((loop.index % 6) + 1) ~ '.webp' }}" alt="{{ product.title }}">
+                              <div>
+                                <h5 class="mb-1">{{ product.title }}</h5>
+                                {% if product.summary %}
+                                  <p class="mb-0">{{ product.summary }}</p>
+                                {% endif %}
+                              </div>
+                            </a>
+                          </div>
+                        {% endfor %}
+                      </div>
+                      <div class="swiper-pagination"></div>
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                    </div>
+                  {% else %}
+                    <div class="admor-empty">{{ 'Add published Products content with Logo image and Web link to populate the hero carousel.'|t }}</div>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-dark text-light pt40 pb40 admor-home-cta">
+        <div class="container">
+          {% if page.homepage_cta %}
+            {{ page.homepage_cta }}
+          {% else %}
+            <div class="row g-4 align-items-center">
+              <div class="col-lg-8">
+                <h3 class="mb-1 text-white"><i class="icofont-check-circled fs-32 me-3 text-brand-red"></i>{{ 'Explore the complete Admor product catalog, branch support, and online ordering.'|t }}</h3>
+              </div>
+              <div class="col-lg-4 text-lg-end text-start">
+                <a class="btn-main bg-color-2" href="/products">{{ 'Discover products'|t }}</a>
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      </section>
+
+      <section id="section-products">
+        <div class="container">
+          {% if page.homepage_categories %}
+            {{ page.homepage_categories }}
+          {% else %}
+            <div class="row">
+              <div class="col-lg-6 offset-lg-3 text-center admor-section-head">
+                <div class="subtitle bg-color-3 mb-3">{{ 'Product categories'|t }}</div>
+                <h2>{{ 'Find products by trade and application'|t }}</h2>
+                <p class="lead">{{ 'Use Product Categories to steer contractors into the right inventory faster.'|t }}</p>
+              </div>
+            </div>
+
+            {% if admor_home.categories %}
+              <div class="admor-taxonomy-grid">
+                {% for category in admor_home.categories %}
+                  <article class="admor-taxonomy-card">
+                    <div class="admor-card__eyebrow">{{ 'Category'|t }}</div>
+                    <h4><a href="{{ category.url }}">{{ category.title }}</a></h4>
+                    <p>{{ 'Use this landing page to surface products, specials, and content tied to this line.'|t }}</p>
+                    <a class="btn-main btn-light-trans mt-2" href="{{ category.url }}">{{ 'View category'|t }}</a>
+                  </article>
+                {% endfor %}
+              </div>
+            {% else %}
+              <div class="admor-empty">{{ 'No Product Categories terms are available yet.'|t }}</div>
+            {% endif %}
+          {% endif %}
+        </div>
+      </section>
+
+      {% include '@admor/includes/teaser-section.html.twig' with {
+        eyebrow: 'Latest post'|t,
+        heading: 'Stay updated with Admor'|t,
+        lead: 'Publish Articles to drive blog and news updates on the homepage.'|t,
+        items: admor_home.news,
+        region: page.homepage_news,
+        empty_text: 'No published Article content is available yet.'|t
+      } only %}
+
+      {% include '@admor/includes/teaser-section.html.twig' with {
+        eyebrow: 'Specials & rebates'|t,
+        heading: 'Promotions and limited-time offers'|t,
+        lead: 'Published Specials & Rebates content appears here automatically.'|t,
+        items: admor_home.specials,
+        region: page.homepage_specials,
+        empty_text: 'No published Specials & Rebates content is available yet.'|t
+      } only %}
+
+      {% include '@admor/includes/teaser-section.html.twig' with {
+        eyebrow: 'Training & events'|t,
+        heading: 'Upcoming sessions across the islands'|t,
+        lead: 'Training & Events nodes are ordered by the Event start field when available.'|t,
+        items: admor_home.training,
+        region: page.homepage_training,
+        empty_text: 'No published Training & Events content is available yet.'|t
+      } only %}
+
+      <section class="bg-color-3">
+        <div class="container">
+          {% if page.homepage_staff %}
+            {{ page.homepage_staff }}
+          {% else %}
+            <div class="row">
+              <div class="col-lg-6 offset-lg-3 text-center admor-section-head">
+                <div class="subtitle bg-white mb-3">{{ 'Support team'|t }}</div>
+                <h2>{{ 'Meet the people behind product support and branch service'|t }}</h2>
+                <p class="lead">{{ 'Staff nodes are grouped by Department so editors can expand and re-order teams without changing theme code.'|t }}</p>
+              </div>
+            </div>
+
+            {% if admor_home.staff_groups %}
+              {% for group in admor_home.staff_groups %}
+                <div class="admor-staff-group">
+                  <h3>{{ group.department }}</h3>
+                  <div class="admor-staff-grid">
+                    {% for person in group.people %}
+                      <article class="admor-card admor-staff-card">
+                        <div class="admor-card__media">
+                          <img src="{{ person.image ?: admor_theme_path ~ '/vendor/coolair/images/misc/1.webp' }}" alt="{{ person.title }}">
+                        </div>
+                        <div class="admor-card__body">
+                          <div class="admor-card__eyebrow">{{ person.position ?: 'Admor staff'|t }}</div>
+                          <h4 class="admor-card__title">{{ person.title }}</h4>
+                          {% if person.phone %}
+                            <div class="admor-card__meta">{{ person.phone }}</div>
+                          {% endif %}
+                          {% if person.email %}
+                            <p><a href="mailto:{{ person.email }}">{{ person.email }}</a></p>
+                          {% endif %}
+                          {% if person.url %}
+                            <a class="btn-main btn-light-trans mt-2" href="{{ person.url }}">{{ 'View profile'|t }}</a>
+                          {% endif %}
+                        </div>
+                      </article>
+                    {% endfor %}
+                  </div>
+                </div>
+              {% endfor %}
+            {% else %}
+              <div class="admor-empty">{{ 'No published Staff content is available yet.'|t }}</div>
+            {% endif %}
+          {% endif %}
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          {% if page.homepage_testimonials %}
+            {{ page.homepage_testimonials }}
+          {% else %}
+            <div class="row">
+              <div class="col-lg-6 offset-lg-3 text-center admor-section-head">
+                <div class="subtitle mb-3">{{ 'Testimonials'|t }}</div>
+                <h2>{{ 'What customers say about Admor'|t }}</h2>
+                <p class="lead">{{ 'Published Testimonials content drives this section.'|t }}</p>
+              </div>
+            </div>
+
+            {% if admor_home.testimonials %}
+              <div class="swiper admor-testimonial-swiper">
+                <div class="swiper-wrapper">
+                  {% for item in admor_home.testimonials %}
+                    <div class="swiper-slide admor-testimonial">
+                      <blockquote>
+                        <i class="icofont-quote-left fs-40 absolute start-30px top-30px text-brand-red"></i>
+                        <p>{{ item.quote }}</p>
+                        <div class="admor-testimonial__who">
+                          {{ item.title }}
+                          {% if item.company %}
+                            <span class="admor-testimonial__company">{{ item.company }}</span>
+                          {% endif %}
+                        </div>
+                      </blockquote>
+                    </div>
+                  {% endfor %}
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            {% else %}
+              <div class="admor-empty">{{ 'No published Testimonials content is available yet.'|t }}</div>
+            {% endif %}
+          {% endif %}
+        </div>
+      </section>
+
+      <section class="bg-color-3">
+        <div class="container">
+          {% if page.homepage_videos %}
+            {{ page.homepage_videos }}
+          {% else %}
+            <div class="row">
+              <div class="col-lg-6 offset-lg-3 text-center admor-section-head">
+                <div class="subtitle bg-white mb-3">{{ 'Videos'|t }}</div>
+                <h2>{{ 'Training clips, product demos, and brand stories'|t }}</h2>
+                <p class="lead">{{ 'Video embeds are generated from the Video URL field on the Videos content type.'|t }}</p>
+              </div>
+            </div>
+
+            {% if admor_home.videos %}
+              <div class="admor-video-grid">
+                {% for video in admor_home.videos %}
+                  <article class="admor-card admor-video-card">
+                    <div class="admor-card__media">
+                      <iframe src="{{ video.embed_url }}" allowfullscreen loading="lazy" title="{{ video.title }}"></iframe>
+                    </div>
+                    <div class="admor-card__body">
+                      <h4 class="admor-card__title"><a href="{{ video.url }}">{{ video.title }}</a></h4>
+                      {% if video.summary %}
+                        <p>{{ video.summary }}</p>
+                      {% endif %}
+                    </div>
+                  </article>
+                {% endfor %}
+              </div>
+            {% else %}
+              <div class="admor-empty">{{ 'No published Videos content is available yet.'|t }}</div>
+            {% endif %}
+          {% endif %}
+        </div>
+      </section>
+
+      {% if page.content %}
+        {{ page.content }}
+      {% endif %}
+    </div>
+  </main>
+
+  {% include '@admor/includes/site-footer.html.twig' %}
+</div>

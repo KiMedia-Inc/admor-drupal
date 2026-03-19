@@ -1,0 +1,29 @@
+links:
+  -
+    title: 'Home'
+    uri: 'internal:/'
+  -
+    title: 'Shop'
+    uri: 'https://shopadmorhvac.com/'
+    target: '_blank'
+  -
+    title: 'Products'
+    uri: 'internal:/products'
+  -
+    title: 'Specials & Rebates'
+    uri: 'internal:/specials'
+  -
+    title: 'Training & Events'
+    uri: 'internal:/training'
+  -
+    title: 'Careers'
+    uri: 'internal:/careers'
+  -
+    title: 'Blog'
+    uri: 'internal:/blog'
+  -
+    title: 'About'
+    uri: 'internal:/about'
+  -
+    title: 'Contact'
+    uri: 'internal:/contact'

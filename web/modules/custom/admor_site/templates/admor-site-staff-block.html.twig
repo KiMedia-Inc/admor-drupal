@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-lg-6 offset-lg-3 text-center admor-section-head">
+    <div class="subtitle bg-white mb-3">{{ 'Support team'|t }}</div>
+    <h2>{{ 'Meet the people behind product support and branch service'|t }}</h2>
+    <p class="lead">{{ 'Staff nodes are grouped by Department so editors can expand and re-order teams without changing theme code.'|t }}</p>
+  </div>
+</div>
+
+{% if groups %}
+  {% for group in groups %}
+    <div class="admor-staff-group">
+      <h3>{{ group.department }}</h3>
+      <div class="admor-staff-grid">
+        {% for person in group.people %}
+          <article class="admor-card admor-staff-card">
+            <div class="admor-card__media">
+              <img src="{{ person.image ?: theme_path ~ '/vendor/coolair/images/misc/1.webp' }}" alt="{{ person.title }}">
+            </div>
+            <div class="admor-card__body">
+              <div class="admor-card__eyebrow">{{ person.position ?: 'Admor staff'|t }}</div>
+              <h4 class="admor-card__title">{{ person.title }}</h4>
+              {% if person.phone %}
+                <div class="admor-card__meta">{{ person.phone }}</div>
+              {% endif %}
+              {% if person.email %}
+                <p><a href="mailto:{{ person.email }}">{{ person.email }}</a></p>
+              {% endif %}
+              {% if person.url %}
+                <a class="btn-main btn-light-trans mt-2" href="{{ person.url }}">{{ 'View profile'|t }}</a>
+              {% endif %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+{% else %}
+  <div class="admor-empty">{{ 'No published Staff content is available yet.'|t }}</div>
+{% endif %}

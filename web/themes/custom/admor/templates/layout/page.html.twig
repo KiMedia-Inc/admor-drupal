@@ -1,0 +1,21 @@
+<div id="wrapper" class="admor-page-shell">
+  {% include '@admor/includes/site-header.html.twig' %}
+
+  <main id="main-content" class="admor-page-content">
+    <section class="admor-page-title">
+      <div class="container">
+        {% if title %}
+          <h1>{{ title }}</h1>
+        {% endif %}
+      </div>
+    </section>
+
+    <div id="content" class="no-top">
+      {% if page.content %}
+        {{ page.content }}
+      {% endif %}
+    </div>
+  </main>
+
+  {% include '@admor/includes/site-footer.html.twig' %}
+</div>

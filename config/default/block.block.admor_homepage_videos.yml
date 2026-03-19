@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - admor_site
+  theme:
+    - admor
+id: admor_homepage_videos
+theme: admor
+region: homepage_videos
+weight: 0
+provider: null
+plugin: admor_site_homepage_videos
+settings:
+  id: admor_site_homepage_videos
+  label: 'Admor Homepage Videos'
+  label_display: '0'
+  provider: admor_site
+visibility: {  }

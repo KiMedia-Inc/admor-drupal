@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - admor_site
+  theme:
+    - admor
+id: admor_homepage_training
+theme: admor
+region: homepage_training
+weight: 0
+provider: null
+plugin: admor_site_homepage_training
+settings:
+  id: admor_site_homepage_training
+  label: 'Admor Homepage Training'
+  label_display: '0'
+  provider: admor_site
+visibility: {  }

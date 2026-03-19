@@ -1,0 +1,49 @@
+<footer class="section-dark">
+  <div class="container">
+    <div class="row gx-5">
+      <div class="col-lg-4 col-sm-6">
+        <img src="{{ admor_theme_path }}/logo.svg" alt="{{ 'Admor HVAC'|t }}">
+        <div class="spacer-20"></div>
+        <p>{{ admor_contact.footer_summary|default('Admor HVAC Products is Hawaii’s HVAC superstore, connecting contractors with inventory, training, specials, and branch-level support across the islands.') }}</p>
+      </div>
+
+      <div class="col-lg-4 col-sm-6">
+        <div class="widget">
+          <h5>{{ 'Quick Links'|t }}</h5>
+          {{ admor_footer_menu|default('') }}
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-sm-6">
+        <div class="widget">
+          <h5 class="text-brand-red">{{ 'Contact'|t }}</h5>
+          <h2 class="mb0"><i class="icofont-phone-circle text-brand-red"></i> {{ admor_contact.phone|default('(808) 841-7400') }}</h2>
+          <div class="spacer-20"></div>
+          <div class="fw-bold text-white"><i class="icofont-location-pin me-2 text-brand-red"></i>{{ 'Office Location'|t }}</div>
+          {{ admor_contact.location|default('2928 Kaihikapu Street, Honolulu, HI 96819') }}
+          <div class="spacer-20"></div>
+          <div class="fw-bold text-white"><i class="icofont-envelope me-2 text-brand-red"></i>{{ 'Email'|t }}</div>
+          <a href="mailto:{{ admor_contact.email|default('info@admorhvac.com') }}">{{ admor_contact.email|default('info@admorhvac.com') }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subfooter">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="de-flex">
+            <div class="de-flex-col admor-footer-note">
+              {{ 'Admor HVAC Distribution'|t }}
+            </div>
+            <ul class="menu-simple">
+              <li><a href="/about">{{ 'About'|t }}</a></li>
+              <li><a href="/contact">{{ 'Contact'|t }}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

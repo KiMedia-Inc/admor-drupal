@@ -1,0 +1,37 @@
+<?php
+
+declare(strict_types=1);
+
+use Drupal\Core\Url;
+
+/**
+ * @file
+ * Theme hooks for the Admor theme.
+ */
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function admor_preprocess_html(array &$variables): void {
+  if (\Drupal::service('path.matcher')->isFrontPage()) {
+    $variables['#attached']['library'][] = 'admor/homepage';
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function admor_preprocess_page(array &$variables): void {
+  $variables['admor_theme_path'] = base_path() . \Drupal::service('extension.list.theme')->getPath('admor');
+  $variables['admor_contact_link'] = Url::fromUserInput('/contact')->toString();
+  $variables['admor_home'] ??= [
+    'hero_products' => [],
+    'categories' => [],
+    'news' => [],
+    'specials' => [],
+    'training' => [],
+    'staff_groups' => [],
+    'testimonials' => [],
+    'videos' => [],
+  ];
+}

@@ -1,0 +1,204 @@
+.admor-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 11rem 0 6rem;
+  background:
+    radial-gradient(circle at top left, rgba(24, 169, 230, 0.18), transparent 34%),
+    radial-gradient(circle at top right, rgba(239, 35, 60, 0.12), transparent 32%),
+    linear-gradient(180deg, #ffffff 0%, #f4f7fa 100%);
+}
+
+.admor-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -30% auto;
+  width: 500px;
+  height: 500px;
+  background: url("../../vendor/coolair/images/background/16.webp") center/cover no-repeat;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.admor-hero__copy {
+  position: relative;
+  z-index: 1;
+}
+
+.admor-hero__copy h1 {
+  font-size: clamp(2.75rem, 5vw, 4.8rem);
+  line-height: 0.95;
+  margin-bottom: 1rem;
+}
+
+.admor-hero__copy p {
+  font-size: 1.08rem;
+  max-width: 40rem;
+}
+
+.admor-hero__panel {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(215, 225, 234, 0.85);
+  border-radius: 28px;
+  box-shadow: var(--admor-shadow);
+  padding: 2rem;
+}
+
+.admor-hero__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.admor-hero__stat {
+  background: #fff;
+  border: 1px solid var(--admor-border);
+  border-radius: 18px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.admor-hero__stat strong {
+  display: block;
+  color: var(--admor-heading);
+  font-size: 1.2rem;
+}
+
+.admor-product-logo {
+  border: 1px solid var(--admor-border);
+  border-radius: 20px;
+  padding: 1.5rem;
+  background: #fff;
+  text-align: center;
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.admor-product-logo img {
+  max-height: 84px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.admor-home-cta {
+  background: linear-gradient(125deg, var(--admor-dark), #1f3146);
+}
+
+.admor-taxonomy-grid,
+.admor-video-grid,
+.admor-news-grid,
+.admor-staff-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.admor-taxonomy-grid,
+.admor-news-grid,
+.admor-video-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.admor-taxonomy-card {
+  padding: 1.75rem;
+  background: linear-gradient(160deg, #fff 0%, #eef4f8 100%);
+  border: 1px solid var(--admor-border);
+  border-radius: 22px;
+  box-shadow: var(--admor-shadow);
+  height: 100%;
+}
+
+.admor-taxonomy-card h4 {
+  margin-bottom: 0.75rem;
+}
+
+.admor-staff-group {
+  margin-top: 2rem;
+}
+
+.admor-staff-group h3 {
+  margin-bottom: 1rem;
+}
+
+.admor-staff-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.admor-staff-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.admor-testimonial {
+  height: 100%;
+}
+
+.admor-testimonial blockquote {
+  background: #fff;
+  border: 1px solid var(--admor-border);
+  border-radius: 24px;
+  box-shadow: var(--admor-shadow);
+  color: var(--admor-text);
+  height: 100%;
+  padding: 2rem 2rem 1.75rem;
+}
+
+.admor-testimonial__who {
+  color: var(--admor-heading);
+  font-weight: 700;
+}
+
+.admor-testimonial__company {
+  color: var(--admor-blue);
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.admor-video-card iframe {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 1199.98px) {
+  .admor-staff-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991.98px) {
+  .admor-hero {
+    padding: 8rem 0 4rem;
+  }
+
+  .admor-taxonomy-grid,
+  .admor-news-grid,
+  .admor-video-grid,
+  .admor-staff-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admor-hero__stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .admor-taxonomy-grid,
+  .admor-news-grid,
+  .admor-video-grid,
+  .admor-staff-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admor-hero__panel {
+    padding: 1.25rem;
+  }
+}
