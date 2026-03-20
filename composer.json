@@ -46,6 +46,19 @@
         },
         "sort-packages": true
     },
+    "scripts": {
+        "lint:php": "find web/modules/custom/admor_site web/themes/custom/admor -type f -name '*.php' -print0 | xargs -0 -n1 php -l",
+        "drush:module-enable": "drush en admor_site -y",
+        "drush:theme-enable": "drush theme:enable admor -y",
+        "drush:admor-setup": [
+            "drush theme:enable admor -y",
+            "drush en admor_site -y",
+            "drush config:set system.theme default admor -y",
+            "drush config:set system.site page.front /home -y",
+            "drush config:import --partial --source=config/default -y",
+            "drush cache:rebuild -y"
+        ]
+    },
     "extra": {
         "drupal-scaffold": {
             "locations": {

@@ -1,0 +1,15 @@
+admor_site.contact_settings:
+  path: '/admin/config/system/admor-site-contact'
+  defaults:
+    _form: '\Drupal\admor_site\Form\SiteContactSettingsForm'
+    _title: 'Admor site contact'
+  requirements:
+    _permission: 'administer site configuration'
+
+admor_site.homepage:
+  path: '/home'
+  defaults:
+    _controller: '\Drupal\admor_site\Controller\HomepageController::build'
+    _title: 'Admor HVAC Distribution'
+  requirements:
+    _access: 'TRUE'

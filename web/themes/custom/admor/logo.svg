@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" role="img" aria-labelledby="admor-logo-title">
+  <title id="admor-logo-title">Admor HVAC</title>
+  <defs>
+    <linearGradient id="admor-metal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d7d7d7"/>
+      <stop offset="100%" stop-color="#8a8a8a"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#admor-metal)" d="M4 420C89 240 124 165 168 97c19-29 48-45 84-45h10c29 0 48 12 60 37l111 331h-87L254 166c-3-9-15-11-20-2L154 307c-10 18-20 34-35 47L4 420Z"/>
+  <path fill="#ef233c" d="M200 319c61-61 126-100 191-112 38-7 82-5 129 7-24 38-58 67-100 85-57 24-118 35-183 32-33-2-55-6-67-12 3 0 13-7 30-20Z"/>
+  <path fill="#18a9e6" d="M197 354c65-41 129-62 192-64 47-2 91 7 131 27-20 29-46 50-79 63-55 22-118 29-188 20-35-5-56-11-64-20 1 0 4-2 8-5Z"/>
+  <ellipse cx="290" cy="418" rx="87" ry="16" fill="#8a8a8a"/>
+</svg>

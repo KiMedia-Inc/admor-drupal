@@ -1,0 +1,117 @@
+<?php
+
+declare(strict_types=1);
+
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\block\Entity\Block;
+use Symfony\Component\Yaml\Yaml;
+
+/**
+ * Implements hook_install().
+ */
+function admor_site_install(): void {
+  $links = admor_site_menu_definitions();
+
+  foreach ($links as $delta => $definition) {
+    $existing = \Drupal::entityTypeManager()->getStorage('menu_link_content')->loadByProperties([
+      'menu_name' => 'main',
+      'title' => $definition['title'],
+    ]);
+
+    if ($existing) {
+      continue;
+    }
+
+    $values = [
+      'title' => $definition['title'],
+      'menu_name' => 'main',
+      'link' => ['uri' => $definition['uri']],
+      'expanded' => FALSE,
+      'weight' => $delta,
+    ];
+
+    if (!empty($definition['target'])) {
+      $values['link']['options']['attributes']['target'] = $definition['target'];
+      $values['link']['options']['attributes']['rel'] = 'noopener noreferrer';
+      $values['third_party_settings']['menu_link_attributes']['target'] = $definition['target'];
+    }
+
+    MenuLinkContent::create($values)->save();
+  }
+
+  admor_site_place_homepage_blocks();
+}
+
+/**
+ * Returns menu definitions from the repo config manifest.
+ */
+function admor_site_menu_definitions(): array {
+  $active = \Drupal::config('admor_site.menu')->get('links');
+  if (is_array($active) && $active) {
+    return $active;
+  }
+
+  $manifest = DRUPAL_ROOT . '/../config/default/admor_site.menu.yml';
+  if (file_exists($manifest)) {
+    $data = Yaml::parseFile($manifest);
+    if (!empty($data['links']) && is_array($data['links'])) {
+      return $data['links'];
+    }
+  }
+
+  return [
+    ['title' => 'Home', 'uri' => 'internal:/'],
+    ['title' => 'Shop', 'uri' => 'https://shopadmorhvac.com/', 'target' => '_blank'],
+    ['title' => 'Products', 'uri' => 'internal:/products'],
+    ['title' => 'Specials & Rebates', 'uri' => 'internal:/specials'],
+    ['title' => 'Training & Events', 'uri' => 'internal:/training'],
+    ['title' => 'Careers', 'uri' => 'internal:/careers'],
+    ['title' => 'Blog', 'uri' => 'internal:/blog'],
+    ['title' => 'About', 'uri' => 'internal:/about'],
+    ['title' => 'Contact', 'uri' => 'internal:/contact'],
+  ];
+}
+
+/**
+ * Creates homepage block placements when the Admor theme is available.
+ */
+function admor_site_place_homepage_blocks(): void {
+  $theme_handler = \Drupal::service('theme_handler');
+  if (!$theme_handler->themeExists('admor')) {
+    return;
+  }
+
+  $placements = [
+    'admor_hero' => ['plugin' => 'admor_site_homepage_hero', 'region' => 'hero', 'label' => 'Admor Homepage Hero'],
+    'admor_homepage_cta' => ['plugin' => 'admor_site_homepage_cta', 'region' => 'homepage_cta', 'label' => 'Admor Homepage CTA'],
+    'admor_homepage_categories' => ['plugin' => 'admor_site_homepage_categories', 'region' => 'homepage_categories', 'label' => 'Admor Homepage Categories'],
+    'admor_homepage_news' => ['plugin' => 'admor_site_homepage_news', 'region' => 'homepage_news', 'label' => 'Admor Homepage News'],
+    'admor_homepage_specials' => ['plugin' => 'admor_site_homepage_specials', 'region' => 'homepage_specials', 'label' => 'Admor Homepage Specials'],
+    'admor_homepage_training' => ['plugin' => 'admor_site_homepage_training', 'region' => 'homepage_training', 'label' => 'Admor Homepage Training'],
+    'admor_homepage_staff' => ['plugin' => 'admor_site_homepage_staff', 'region' => 'homepage_staff', 'label' => 'Admor Homepage Staff'],
+    'admor_homepage_testimonials' => ['plugin' => 'admor_site_homepage_testimonials', 'region' => 'homepage_testimonials', 'label' => 'Admor Homepage Testimonials'],
+    'admor_homepage_videos' => ['plugin' => 'admor_site_homepage_videos', 'region' => 'homepage_videos', 'label' => 'Admor Homepage Videos'],
+  ];
+
+  foreach ($placements as $id => $placement) {
+    if (Block::load($id)) {
+      continue;
+    }
+
+    Block::create([
+      'id' => $id,
+      'theme' => 'admor',
+      'plugin' => $placement['plugin'],
+      'region' => $placement['region'],
+      'weight' => 0,
+      'visibility' => [],
+      'settings' => [
+        'id' => $placement['plugin'],
+        'label' => $placement['label'],
+        'label_display' => FALSE,
+        'provider' => 'admor_site',
+      ],
+      'status' => TRUE,
+    ])->save();
+  }
+}

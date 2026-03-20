@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - admor_site
+  theme:
+    - admor
+id: admor_homepage_staff
+theme: admor
+region: homepage_staff
+weight: 0
+provider: null
+plugin: admor_site_homepage_staff
+settings:
+  id: admor_site_homepage_staff
+  label: 'Admor Homepage Staff'
+  label_display: '0'
+  provider: admor_site
+visibility: {  }

@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - admor_site
+  theme:
+    - admor
+id: admor_homepage_news
+theme: admor
+region: homepage_news
+weight: 0
+provider: null
+plugin: admor_site_homepage_news
+settings:
+  id: admor_site_homepage_news
+  label: 'Admor Homepage News'
+  label_display: '0'
+  provider: admor_site
+visibility: {  }

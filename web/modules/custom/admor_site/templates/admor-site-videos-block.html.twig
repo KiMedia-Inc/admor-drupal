@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-lg-6 offset-lg-3 text-center admor-section-head">
+    <div class="subtitle bg-white mb-3">{{ 'Videos'|t }}</div>
+    <h2>{{ 'Training clips, product demos, and brand stories'|t }}</h2>
+    <p class="lead">{{ 'Video embeds are generated from the Video URL field on the Videos content type.'|t }}</p>
+  </div>
+</div>
+
+{% if items %}
+  <div class="admor-video-grid">
+    {% for video in items %}
+      <article class="admor-card admor-video-card">
+        <div class="admor-card__media">
+          <iframe src="{{ video.embed_url }}" allowfullscreen loading="lazy" title="{{ video.title }}"></iframe>
+        </div>
+        <div class="admor-card__body">
+          <h4 class="admor-card__title"><a href="{{ video.url }}">{{ video.title }}</a></h4>
+          {% if video.summary %}
+            <p>{{ video.summary }}</p>
+          {% endif %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="admor-empty">{{ 'No published Videos content is available yet.'|t }}</div>
+{% endif %}

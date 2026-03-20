@@ -1,0 +1,33 @@
+vendor:
+  css:
+    theme:
+      vendor/coolair/css/bootstrap.min.css: {}
+      vendor/coolair/css/plugins.css: {}
+      vendor/coolair/css/swiper.css: {}
+      vendor/coolair/css/style.css: {}
+      vendor/coolair/css/coloring.css: {}
+      vendor/coolair/css/colors/scheme-01.css: {}
+  js:
+    vendor/coolair/js/plugins.js: { minified: true }
+    vendor/coolair/js/designesia.js: { minified: true }
+    vendor/coolair/js/swiper.js: { minified: true }
+
+global:
+  css:
+    theme:
+      assets/css/theme.css: {}
+  js:
+    assets/js/admor.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+    - admor/vendor
+
+homepage:
+  css:
+    theme:
+      assets/css/homepage.css: {}
+  js:
+    assets/js/homepage.js: {}
+  dependencies:
+    - admor/global

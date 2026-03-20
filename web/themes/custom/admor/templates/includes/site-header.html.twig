@@ -1,0 +1,63 @@
+<header class="transparent header-light scroll-light has-topbar">
+  <div id="topbar">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="d-flex justify-content-between xs-hide">
+            <div class="header-widget d-flex">
+              <div class="topbar-widget">
+                <a href="tel:{{ admor_contact.phone_clean|default('8088417400') }}"><i class="icofont-phone"></i>{{ admor_contact.phone|default('(808) 841-7400') }}</a>
+              </div>
+              <div class="topbar-widget">
+                <a href="mailto:{{ admor_contact.email|default('info@admorhvac.com') }}"><i class="icofont-envelope"></i>{{ admor_contact.email|default('info@admorhvac.com') }}</a>
+              </div>
+              <div class="topbar-widget">
+                <span class="admor-topbar__summary"><i class="icofont-wall-clock"></i><strong>{{ admor_contact.hours|default('Mon - Fri 6:30am - 4:30pm | Sat 7:00am - 11:00am') }}</strong></span>
+              </div>
+            </div>
+
+            {% if admor_contact.topbar_note %}
+              <div class="admor-topbar__summary">
+                <strong>{{ admor_contact.topbar_note }}</strong>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="de-flex sm-pt10">
+          <div class="de-flex-col">
+            <div id="logo">
+              <a href="/" class="admor-site-branding">
+                <img class="logo-main" src="{{ admor_theme_path }}/logo.svg" alt="{{ 'Admor HVAC'|t }}">
+                <img class="logo-scroll" src="{{ admor_theme_path }}/logo.svg" alt="{{ 'Admor HVAC'|t }}">
+                <img class="logo-mobile" src="{{ admor_theme_path }}/logo.svg" alt="{{ 'Admor HVAC'|t }}">
+                <span class="admor-site-branding__text">
+                  <span class="admor-site-branding__name">{{ 'Admor HVAC Distribution'|t }}</span>
+                  <span class="admor-site-branding__tagline">{{ 'Products, training, support'|t }}</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="de-flex-col header-col-mid">
+            {{ admor_main_menu|default(page.navigation) }}
+          </div>
+
+          <div class="de-flex-col">
+            <div class="menu_side_area">
+              <a href="{{ admor_contact_link }}" class="btn-main bg-color-2">{{ 'Contact Us'|t }}</a>
+              <span id="menu-btn"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

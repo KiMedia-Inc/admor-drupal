@@ -1,0 +1,42 @@
+<section>
+  <div class="container">
+    {% if region %}
+      {{ region }}
+    {% else %}
+      <div class="row g-4">
+        <div class="col-lg-6 offset-lg-3 text-center admor-section-head">
+          <div class="subtitle mb-3">{{ eyebrow }}</div>
+          <h2>{{ heading }}</h2>
+          <p class="lead">{{ lead }}</p>
+        </div>
+      </div>
+
+      {% if items %}
+        <div class="admor-news-grid">
+          {% for item in items %}
+            <article class="admor-card">
+              <div class="admor-card__media{{ item.media_fit == 'contain' ? ' admor-card__media--contain' : '' }}">
+                <img src="{{ item.image ?: item.fallback_image }}" alt="{{ item.title }}">
+              </div>
+              <div class="admor-card__body">
+                {% if item.eyebrow %}
+                  <div class="admor-card__eyebrow">{{ item.eyebrow }}</div>
+                {% endif %}
+                <h4 class="admor-card__title"><a href="{{ item.url }}">{{ item.title }}</a></h4>
+                {% if item.meta %}
+                  <div class="admor-card__meta">{{ item.meta }}</div>
+                {% endif %}
+                {% if item.summary %}
+                  <p>{{ item.summary }}</p>
+                {% endif %}
+                <a class="btn-main btn-light-trans mt-2" href="{{ item.url }}">{{ 'Read more'|t }}</a>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="admor-empty">{{ empty_text }}</div>
+      {% endif %}
+    {% endif %}
+  </div>
+</section>

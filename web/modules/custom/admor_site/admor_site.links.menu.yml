@@ -1,0 +1,5 @@
+admor_site.contact_settings:
+  title: 'Admor site contact'
+  description: 'Manage the Admor site contact values used in the header and footer.'
+  parent: system.admin_config_system
+  route_name: admor_site.contact_settings

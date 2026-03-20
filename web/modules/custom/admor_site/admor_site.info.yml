@@ -1,0 +1,13 @@
+name: Admor Site
+type: module
+description: 'Site helpers, contact settings, and homepage data assembly for the Admor theme.'
+package: Custom
+core_version_requirement: ^11
+configure: admor_site.contact_settings
+dependencies:
+  - drupal:block
+  - drupal:node
+  - drupal:taxonomy
+  - drupal:link
+  - drupal:image
+  - drupal:menu_link_content

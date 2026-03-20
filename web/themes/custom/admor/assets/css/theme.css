@@ -1,0 +1,250 @@
+:root {
+  --admor-blue: #18a9e6;
+  --admor-red: #ef233c;
+  --admor-dark: #0f1722;
+  --admor-surface: #f4f7fa;
+  --admor-surface-strong: #e8eef4;
+  --admor-text: #586471;
+  --admor-heading: #17212b;
+  --admor-border: #d7e1ea;
+  --admor-radius: 20px;
+  --admor-shadow: 0 20px 50px rgba(15, 23, 34, 0.08);
+}
+
+body {
+  color: var(--admor-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--admor-heading);
+}
+
+.bg-color {
+  background: var(--admor-blue) !important;
+}
+
+.bg-color-2,
+.id-color-2 {
+  background: var(--admor-red) !important;
+  color: #fff !important;
+}
+
+.bg-color-3 {
+  background: var(--admor-surface) !important;
+}
+
+.id-color,
+.text-brand {
+  color: var(--admor-blue) !important;
+}
+
+.text-brand-red {
+  color: var(--admor-red) !important;
+}
+
+.btn-main {
+  background: var(--admor-blue);
+  border-radius: 999px;
+  box-shadow: none;
+  text-transform: none;
+}
+
+.btn-main:hover,
+.btn-main:focus {
+  background: var(--admor-red);
+}
+
+#topbar {
+  background: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid rgba(215, 225, 234, 0.8);
+}
+
+header.transparent.scroll-light {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+}
+
+#logo img {
+  height: 58px;
+  width: auto;
+}
+
+.admor-site-branding {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.admor-site-branding__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.admor-site-branding__name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--admor-heading);
+}
+
+.admor-site-branding__tagline {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--admor-text);
+}
+
+.admor-topbar__summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.admor-topbar__summary strong {
+  color: var(--admor-heading);
+}
+
+.admor-link-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  border: 1px solid var(--admor-border);
+  border-radius: 999px;
+  color: var(--admor-heading);
+  padding: 0.65rem 1rem;
+  font-weight: 600;
+}
+
+.admor-link-pill:hover,
+.admor-link-pill:focus {
+  border-color: var(--admor-blue);
+  color: var(--admor-blue);
+}
+
+.admor-section-head {
+  margin-bottom: 2rem;
+}
+
+.admor-section-head .subtitle {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+}
+
+.admor-card {
+  background: #fff;
+  border: 1px solid var(--admor-border);
+  border-radius: var(--admor-radius);
+  box-shadow: var(--admor-shadow);
+  overflow: hidden;
+  height: 100%;
+}
+
+.admor-card__body {
+  padding: 1.75rem;
+}
+
+.admor-card__eyebrow {
+  color: var(--admor-red);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.admor-card__title {
+  margin: 0.55rem 0 0.75rem;
+}
+
+.admor-card__title a {
+  color: var(--admor-heading);
+}
+
+.admor-card__title a:hover,
+.admor-card__title a:focus {
+  color: var(--admor-blue);
+}
+
+.admor-card__meta {
+  color: var(--admor-text);
+  font-size: 0.92rem;
+  margin-bottom: 0.85rem;
+}
+
+.admor-card__media {
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(145deg, #eef4f8, #dde6ee);
+  overflow: hidden;
+}
+
+.admor-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admor-card__media--contain {
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+}
+
+.admor-card__media--contain img {
+  object-fit: contain;
+}
+
+.admor-empty {
+  border: 1px dashed var(--admor-border);
+  border-radius: var(--admor-radius);
+  color: var(--admor-text);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.admor-footer-note {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.admor-rich-text p:last-child,
+.admor-card__body p:last-child {
+  margin-bottom: 0;
+}
+
+.admor-page-shell {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #fefefe 0%, #f7fafc 100%);
+}
+
+.admor-page-content {
+  padding-top: 0;
+}
+
+.admor-page-title {
+  padding: 8rem 0 3rem;
+}
+
+.admor-page-title h1 {
+  margin-bottom: 0;
+}
+
+@media (max-width: 991.98px) {
+  #logo img {
+    height: 48px;
+  }
+
+  .admor-site-branding__text {
+    display: none;
+  }
+
+  .admor-page-title {
+    padding-top: 6.5rem;
+  }
+}

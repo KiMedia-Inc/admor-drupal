@@ -1,0 +1,4 @@
+services:
+  admor_site.content_resolver:
+    class: Drupal\admor_site\Service\ContentResolver
+    arguments: ['@entity_type.manager', '@entity_field.manager', '@file_url_generator', '@date.formatter', '@menu.link_tree']
