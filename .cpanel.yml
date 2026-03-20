@@ -2,3 +2,4 @@ deployment:
   tasks:
     - /usr/local/bin/php -v
     - composer install --no-dev
+    - vendor/bin/drush cr -r web
