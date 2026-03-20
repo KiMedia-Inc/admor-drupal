@@ -2,7 +2,7 @@ name: Admor
 type: theme
 description: 'Custom Drupal theme for Admor HVAC Distribution based on the CoolAir homepage-6 template.'
 package: Custom
-base theme: false
+base theme: olivero
 core_version_requirement: ^11
 libraries:
   - admor/global
