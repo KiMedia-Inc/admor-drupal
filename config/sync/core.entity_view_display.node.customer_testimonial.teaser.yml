@@ -1,0 +1,40 @@
+uuid: 3fb5dce8-d3a0-4475-953d-59ada8cba631
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.customer_testimonial.body
+    - field.field.node.customer_testimonial.field_customer_image
+    - field.field.node.customer_testimonial.field_island
+    - field.field.node.customer_testimonial.field_sort_order
+    - field.field.node.customer_testimonial.field_system_installed
+    - field.field.node.customer_testimonial.field_testimonial_quote
+    - node.type.customer_testimonial
+  module:
+    - text
+    - user
+id: node.customer_testimonial.teaser
+targetEntityType: node
+bundle: customer_testimonial
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_customer_image: true
+  field_island: true
+  field_sort_order: true
+  field_system_installed: true
+  field_testimonial_quote: true

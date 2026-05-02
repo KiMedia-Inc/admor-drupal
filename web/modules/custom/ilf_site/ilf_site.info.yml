@@ -1,0 +1,15 @@
+name: 'I Love My Fujitsu Site'
+type: module
+description: 'Site setup, content model, routes, and menus for the Fujitsu Hawaii rebuild.'
+package: Custom
+core_version_requirement: ^11
+dependencies:
+  - drupal:field
+  - drupal:file
+  - drupal:image
+  - drupal:link
+  - drupal:menu_link_content
+  - drupal:node
+  - drupal:options
+  - drupal:path
+  - drupal:text

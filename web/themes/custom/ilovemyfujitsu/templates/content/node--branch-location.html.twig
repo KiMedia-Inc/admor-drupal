@@ -1,0 +1,35 @@
+<article{{ attributes.addClass('ilf-structured-node', 'ilf-structured-node--branch') }}>
+  <header class="fujitsu-page-hero">
+    <div class="container">
+      <p class="fujitsu-eyebrow">Local Fujitsu support</p>
+      <h1>{{ label }}</h1>
+    </div>
+  </header>
+
+  <div class="fujitsu-page-body">
+    <div class="container">
+      <div class="ilf-detail-card ilf-dealer-detail">
+        <div class="ilf-dealer-detail__intro">
+          {% if node.field_image.target_id and node.field_image.entity %}
+            <img src="{{ file_url(node.field_image.entity.uri.value) }}" alt="{{ node.field_image.alt ?: (label|render|striptags ~ ' branch location') }}" loading="lazy">
+          {% endif %}
+          {{ content.body }}
+        </div>
+        <aside class="ilf-dealer-detail__contact" aria-label="Branch contact information">
+          {% if node.field_address.value %}
+            <div class="field"><div class="field__label">Address</div><div class="field__item">{{ node.field_address.value|nl2br }}</div></div>
+          {% endif %}
+          {% if node.field_phone.value %}
+            <div class="field"><div class="field__label">Phone</div><div class="field__item"><a href="tel:{{ node.field_phone.value|replace({'(': '', ')': '', ' ': '', '-': ''}) }}">{{ node.field_phone.value }}</a></div></div>
+          {% endif %}
+          {% if node.field_fax.value %}
+            <div class="field"><div class="field__label">Fax</div><div class="field__item">{{ node.field_fax.value }}</div></div>
+          {% endif %}
+          {% if node.field_google_maps_url.uri %}
+            <a class="btn-main" href="{{ node.field_google_maps_url.uri }}">{{ node.field_google_maps_url.title ?: 'Open map' }}</a>
+          {% endif %}
+        </aside>
+      </div>
+    </div>
+  </div>
+</article>

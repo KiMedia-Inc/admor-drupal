@@ -1,0 +1,33 @@
+{{ attach_library('ilovemyfujitsu/global') }}
+
+<section class="fujitsu-page-hero ilf-listing-hero">
+  <div class="container">
+    <p class="fujitsu-eyebrow">{{ kicker }}</p>
+    <h1>{{ heading }}</h1>
+    <p>{{ intro }}</p>
+  </div>
+</section>
+
+<section class="ilf-listing">
+  <div class="container">
+    {% if exposed %}
+      <div class="ilf-listing__filters">{{ exposed }}</div>
+    {% endif %}
+
+    {% if extra_top is defined and extra_top %}
+      {{ extra_top|raw }}
+    {% endif %}
+
+    {% if rows %}
+      <div class="ilf-listing__grid">
+        {{ rows }}
+      </div>
+    {% elseif empty %}
+      <div class="ilf-listing__empty">{{ empty }}</div>
+    {% endif %}
+
+    {% if pager %}
+      <div class="ilf-listing__pager">{{ pager }}</div>
+    {% endif %}
+  </div>
+</section>

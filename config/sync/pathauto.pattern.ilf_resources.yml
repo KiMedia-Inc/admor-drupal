@@ -1,0 +1,22 @@
+uuid: f6591e0e-d25a-45b6-9427-4d5f74a7b69f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: ilf_resources
+label: 'Fujitsu resources'
+type: 'canonical_entities:node'
+pattern: '/resources/[node:title]'
+selection_criteria:
+  2517d1d9-cd9e-4c1f-8fc2-5f6321f96b32:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 2517d1d9-cd9e-4c1f-8fc2-5f6321f96b32
+    context_mapping:
+      node: node
+    bundles:
+      resource_brochure: resource_brochure
+selection_logic: and
+weight: -8
+relationships: {  }

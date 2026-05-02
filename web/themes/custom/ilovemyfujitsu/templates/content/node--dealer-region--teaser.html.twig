@@ -1,0 +1,18 @@
+<article{{ attributes.addClass('ilf-teaser-card', 'ilf-teaser-card--dealer-region') }}>
+  <div class="ilf-teaser-card__body">
+    <p class="ilf-teaser-card__type">Find a Fujitsu contractor</p>
+    <h2><a href="{{ url }}">{{ label }}</a></h2>
+    {% if node.field_island_region.entity %}
+      <div class="ilf-dealer-meta">
+        <p><strong>Island</strong><span>{{ node.field_island_region.entity.label }}</span></p>
+      </div>
+    {% endif %}
+    {% if node.body.value %}
+      <p>{{ node.body.value|striptags|replace({'Why choose a Fujitsu Elite Contractor?': '', 'Why choose a Fujitsu contractor?': ''})|trim|slice(0, 190) }}{% if node.body.value|striptags|length > 190 %}...{% endif %}</p>
+    {% endif %}
+    {% if node.field_dealer_locator_url.uri %}
+      <a class="btn-main ilf-teaser-card__action" href="{{ node.field_dealer_locator_url.uri }}" data-ilf-contractor-link>{{ node.field_cta_text.value ?: 'Open contractor locator' }}</a>
+    {% endif %}
+    <a class="ilf-teaser-card__link" href="{{ url }}">View island details</a>
+  </div>
+</article>

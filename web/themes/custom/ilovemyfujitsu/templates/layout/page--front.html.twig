@@ -1,0 +1,384 @@
+<div id="wrapper" class="fujitsu-shell">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://ilovemyfujitsu.com/#organization",
+          "name": "I Love My Fujitsu",
+          "url": "https://ilovemyfujitsu.com",
+          "logo": "https://ilovemyfujitsu.com/themes/custom/ilovemyfujitsu/assets/images/fujitsu-logo.png",
+          "sameAs": [
+            "https://www.instagram.com/ilovemyfujitsu/",
+            "https://www.facebook.com/ilovemyfujitsuhawaii"
+          ],
+          "brand": {
+            "@type": "Brand",
+            "name": "Fujitsu"
+          }
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://ilovemyfujitsu.com/#localbusiness",
+          "name": "I Love My Fujitsu Hawaii",
+          "url": "https://ilovemyfujitsu.com",
+          "telephone": "+1-808-841-7400",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "HI",
+            "addressCountry": "US"
+          },
+          "parentOrganization": {
+            "@id": "https://ilovemyfujitsu.com/#organization"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://ilovemyfujitsu.com/#website",
+          "url": "https://ilovemyfujitsu.com",
+          "name": "I Love My Fujitsu",
+          "publisher": {
+            "@id": "https://ilovemyfujitsu.com/#organization"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://ilovemyfujitsu.com/search/node?keys={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    }
+  </script>
+  {% include '@ilovemyfujitsu/includes/header.html.twig' %}
+
+  <main id="main-content" class="fujitsu-main">
+    {% set main_cta = homepage_ctas['Homepage main CTA'] ?? null %}
+    {% set dealer_cta = homepage_ctas['Find a Fujitsu Dealer CTA'] ?? null %}
+    {% set help_cta = homepage_ctas['Need Help Choosing a System CTA'] ?? null %}
+    {% set call_cta = homepage_ctas['Call Admor HVAC CTA'] ?? null %}
+    {% set award_cta = homepage_ctas['Best of Hawaii Award Trust Badge'] ?? null %}
+    {% set instagram_cta = homepage_ctas['Instagram Follow CTA'] ?? null %}
+    {% set warranty_cta = homepage_ctas['Fujitsu Warranty / Rebate Promo Block'] ?? null %}
+
+    <section class="fujitsu-hero fujitsu-hero--managed">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <p class="fujitsu-eyebrow">Built for Hawaii comfort</p>
+            <h1>Fujitsu Air Conditioning Systems for Hawaii Homes &amp; Businesses</h1>
+            {% if main_cta %}
+              <div class="fujitsu-hero__lead">{{ main_cta.body|raw }}</div>
+            {% else %}
+              <p class="fujitsu-hero__lead">Ask your contractor for Fujitsu by name, then use the resources on this site to compare options with confidence.</p>
+            {% endif %}
+            <div class="fujitsu-actions">
+              <a class="btn-main" href="{{ main_cta.link|default('/find-a-fujitsu-contractor') }}">{{ main_cta.link_text|default('Find a Fujitsu Dealer') }}</a>
+              <a class="btn-main btn-outline" href="/products">Explore Fujitsu Products</a>
+            </div>
+            <div class="fujitsu-trust-row">
+              <span>12-year warranty options</span>
+              <span>Local parts support</span>
+              <span>Certified contractors</span>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            {% set first_slide = homepage_slides|first %}
+            <div class="fujitsu-hero__image">
+              {% if first_slide.image %}
+                <img src="{{ first_slide.image }}" alt="{{ first_slide.title }}">
+              {% else %}
+                <img src="{{ theme_path }}/vendor/coolair/images/misc/14.webp" alt="Modern home comfort with Fujitsu air conditioning">
+              {% endif %}
+              <div class="fujitsu-hero__badge">
+                <strong>Ask by name</strong>
+                <span>Make Fujitsu the system your contractor quotes first.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fujitsu-why">
+      <div class="container">
+        <div class="fujitsu-why__intro">
+          <p class="fujitsu-eyebrow">Why Fujitsu?</p>
+          <h2>If you are installing AC in Hawaii, ask why the system is built for island comfort.</h2>
+          <p>Before accepting a quote for Mitsubishi, Daikin, LG, Gree, Panasonic, or another ductless mini-split brand, compare the factors that matter most in Hawaii: humidity, salt air, quiet comfort, energy use, warranty strength, parts access, and contractor support.</p>
+        </div>
+        <div class="fujitsu-why__grid">
+          <article>
+            <span>01</span>
+            <h3>Built for Hawaii’s climate</h3>
+            <p>Fujitsu systems are positioned for humid, salt-air environments where AC runs hard and reliability matters every day.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Efficient ductless comfort</h3>
+            <p>Quiet mini-split and multi-zone options help cool the rooms you actually use, with less wasted energy and better comfort control.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Warranty confidence</h3>
+            <p>Strong warranty programs, including 12-year options and Gecko warranty messaging, make Fujitsu easier to choose long term.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Local support behind the brand</h3>
+            <p>Admor supports Hawaii contractors with local product knowledge, inventory, parts access, and training resources.</p>
+          </article>
+        </div>
+        <div class="fujitsu-why__compare">
+          <div>
+            <h3>Don’t just ask, “What AC can you install?”</h3>
+            <p>Ask your contractor: “Can you quote Fujitsu, and can you explain why it is the right fit for my home?”</p>
+          </div>
+          <div class="fujitsu-actions">
+            <a class="btn-main" href="/find-a-fujitsu-contractor">Find a Fujitsu Dealer</a>
+            <a class="btn-main btn-outline" href="/products">Explore Fujitsu Products</a>
+            <a class="btn-main btn-outline" href="/fujitsu-vs-mitsubishi">Compare Fujitsu to Other Brands</a>
+            <a class="btn-main btn-outline" href="/why-fujitsu-hawaii">Why Fujitsu for Hawaii</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% if homepage_slides %}
+      <section class="fujitsu-pull fujitsu-pull--featured">
+        <div class="container">
+          <div class="fujitsu-section-heading">
+            <p class="fujitsu-eyebrow">Featured Fujitsu stories</p>
+            <h2>Comfort, rebates, warranty confidence, and Hawaii community support.</h2>
+            <p>Explore the local proof points that help homeowners and businesses choose Fujitsu before the estimate is written.</p>
+          </div>
+          <div class="fujitsu-managed-grid fujitsu-managed-grid--slides">
+            {% for slide in homepage_slides %}
+              <article class="fujitsu-story-card">
+                {% if slide.image %}
+                  <img src="{{ slide.image }}" alt="{{ slide.title }}">
+                {% endif %}
+                <h3>{{ slide.title }}</h3>
+                <p>{{ slide.summary }}</p>
+                <a href="{{ slide.link }}">{{ slide.link_text }}</a>
+              </article>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+    {% endif %}
+
+    {% if homepage_branch_locations %}
+      <section class="fujitsu-contractor-flow">
+        <div class="container">
+          <div class="fujitsu-section-heading fujitsu-section-heading--left">
+            <p class="fujitsu-eyebrow">Local inventory and support</p>
+            <h2>Fujitsu is backed here in Hawaii.</h2>
+            <p>Local distribution support keeps contractors connected to product knowledge, equipment availability, and parts when Hawaii customers need them.</p>
+          </div>
+          <div class="fujitsu-flow-grid fujitsu-flow-grid--locations">
+            {% for branch in homepage_branch_locations %}
+              <div>
+                <strong>{{ loop.index }}</strong>
+                <h3>{{ branch.title }}</h3>
+                {% if branch.address %}<p>{{ branch.address|raw }}</p>{% endif %}
+                {% if branch.phone %}<p><b>Phone:</b> {{ branch.phone }}</p>{% endif %}
+                {% if branch.fax %}<p><b>Fax:</b> {{ branch.fax }}</p>{% endif %}
+                <a class="btn-main" href="{{ branch.link }}">{{ branch.link_text }}</a>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+    {% endif %}
+
+    <section class="fujitsu-feature-band">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-7">
+            <p class="fujitsu-eyebrow">Trust, warranty, rebates</p>
+            {% if warranty_cta %}
+              {{ warranty_cta.body|raw }}
+            {% else %}
+              <h2>Premium comfort should feel like a safe decision.</h2>
+              <p>Strong warranty messaging and Hawaii Energy rebate opportunities make Fujitsu easier to choose.</p>
+            {% endif %}
+          </div>
+          <div class="col-lg-5">
+            <div class="fujitsu-feature-card">
+              {% if award_cta %}
+                {{ award_cta.body|raw }}
+                <a class="btn-main" href="{{ award_cta.link }}">{{ award_cta.link_text }}</a>
+              {% else %}
+                <h3>Best of Hawaii trusted comfort</h3>
+                <p>Local recognition and familiar Fujitsu stories build confidence before the estimate.</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fujitsu-stories js-fujitsu-proof">
+      <div class="container">
+        <div class="fujitsu-section-heading">
+          <p class="fujitsu-eyebrow">Start here</p>
+          <h2>Three easy paths into Fujitsu.</h2>
+          <p>Commercials build familiarity, updates build trust, and the contractor flow turns demand into the next estimate.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <article class="fujitsu-story-card">
+              <img src="/sites/default/files/commercials/fujitsu-girl-growing-up.jpg" alt="Fujitsu commercial preview">
+              <h3>Fujitsu Commercials</h3>
+              <p>Watch the local commercials that keep Fujitsu familiar across Hawaii.</p>
+              <a href="/commercials">Watch commercials</a>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="fujitsu-story-card">
+              <img src="/sites/default/files/wordpress-featured/fujitsu-hawaii-on-khon2.jpg" alt="Fujitsu Hawaii update">
+              <h3>Updates</h3>
+              <p>Browse news, rebates, community support, and local Fujitsu proof points.</p>
+              <a href="/updates">Read updates</a>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="fujitsu-story-card">
+              <img src="/sites/default/files/wordpress-featured/find-a-fujitsu-contractor.png" alt="Find a Fujitsu contractor">
+              <h3>Find a Fujitsu Dealer</h3>
+              <p>Choose your island and ask for Fujitsu before the estimate is written.</p>
+              <a href="/find-a-fujitsu-contractor">Find a dealer</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% if call_cta %}
+      <section class="fujitsu-cta-strip">
+        <div class="container">
+          <div class="fujitsu-cta-strip__inner">
+            {{ call_cta.body|raw }}
+            <a class="btn-main" href="{{ call_cta.link }}">{{ call_cta.link_text }}</a>
+          </div>
+        </div>
+      </section>
+    {% endif %}
+
+    {% if homepage_latest_news %}
+      <section class="fujitsu-resources">
+        <div class="container">
+          <div class="fujitsu-section-heading">
+            <p class="fujitsu-eyebrow">Latest news</p>
+            <h2>Fresh reasons to choose Fujitsu.</h2>
+            <p>Follow rebates, local stories, warranty updates, and practical guidance that make Fujitsu easier to request with confidence.</p>
+          </div>
+          <div class="fujitsu-managed-grid">
+            {% for item in homepage_latest_news %}
+              <article class="fujitsu-story-card">
+                {% if item.image %}<img src="{{ item.image }}" alt="{{ item.title }}">{% endif %}
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.summary }}</p>
+                <a href="{{ item.url }}">Read update</a>
+              </article>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+    {% endif %}
+
+    {% if homepage_faces %}
+      <section class="fujitsu-home-faces">
+        <div class="container">
+          <div class="fujitsu-section-heading">
+            <p class="fujitsu-eyebrow">Faces of Fujitsu</p>
+            <h2>Familiar Hawaii voices help make Fujitsu the brand people request.</h2>
+            <p>Local ambassadors and community stories help connect premium comfort with the people and places Hawaii already knows.</p>
+          </div>
+          <div class="fujitsu-face-strip">
+            {% for face in homepage_faces %}
+              <a href="{{ face.url }}">
+                {% if face.image %}<img src="{{ face.image }}" alt="{{ face.title }}">{% endif %}
+                <strong>{{ face.title }}</strong>
+              </a>
+            {% endfor %}
+          </div>
+          <div class="fujitsu-centered-action">
+            <a class="btn-main" href="/friends-family">Meet all Faces of Fujitsu</a>
+          </div>
+        </div>
+      </section>
+    {% endif %}
+
+    {% if homepage_testimonials %}
+      <section class="ilf-testimonials">
+        <div class="container">
+          <div class="fujitsu-section-heading">
+            <p class="fujitsu-eyebrow">Customer proof</p>
+            <h2>Hawaii buyers choose Fujitsu for comfort they can feel.</h2>
+          </div>
+          <div class="ilf-testimonials__grid">
+            {% for item in homepage_testimonials %}
+              <article>
+                <p>“{{ item.quote ?: item.summary }}”</p>
+                <strong>{{ item.title }}</strong>
+                {% if item.island or item.system %}<span>{{ item.island }}{% if item.island and item.system %} / {% endif %}{{ item.system }}</span>{% endif %}
+              </article>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+    {% endif %}
+
+    <section class="fujitsu-contractor-flow">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5">
+            <p class="fujitsu-eyebrow">Dealer regions</p>
+            <h2>Find Fujitsu support by island.</h2>
+            <p>Choose your island, connect with the right contractor pathway, and ask for Fujitsu by name during your estimate.</p>
+          </div>
+          <div class="col-lg-7">
+            <div class="fujitsu-resource-grid">
+              {% for region in homepage_dealer_regions %}
+                <a href="{{ region.url }}">{{ region.title }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% if instagram_cta or homepage_donation_causes %}
+      <section class="fujitsu-resources">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-5">
+              <p class="fujitsu-eyebrow">Community and social proof</p>
+              {% if instagram_cta %}
+                {{ instagram_cta.body|raw }}
+                <a class="btn-main" href="{{ instagram_cta.link }}">{{ instagram_cta.link_text }}</a>
+              {% endif %}
+            </div>
+            <div class="col-lg-7">
+              <div class="fujitsu-resource-grid">
+                {% for cause in homepage_donation_causes %}
+                  <a href="{{ cause.link }}">{{ cause.title }}</a>
+                {% endfor %}
+                <a href="/resources">Product resources</a>
+                <a href="/tech-tips">Tech tips</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    {% endif %}
+  </main>
+
+  {% include '@ilovemyfujitsu/includes/footer.html.twig' %}
+</div>
+<div class="ilf-sticky-cta" role="region" aria-label="Find a Fujitsu dealer">
+  <span>Ready to choose Fujitsu?</span>
+  <a class="btn-main" href="/find-a-fujitsu-contractor">Find a Fujitsu Dealer Near You</a>
+</div>

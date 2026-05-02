@@ -1,0 +1,31 @@
+<footer class="fujitsu-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <img class="fujitsu-footer__logo" src="{{ theme_path }}/assets/images/fujitsu-logo.png" alt="I Love My Fujitsu">
+        <p>Helping Hawaii homeowners and businesses ask for the air conditioning system built for island comfort: Fujitsu.</p>
+        <div class="fujitsu-social fujitsu-social--footer" aria-label="Social links">
+          <a href="https://www.instagram.com/ilovemyfujitsu/" target="_blank" rel="noopener noreferrer" aria-label="I Love My Fujitsu on Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.4" cy="6.6" r="1"></circle></svg>
+          </a>
+          <a href="https://www.facebook.com/ilovemyfujitsuhawaii" target="_blank" rel="noopener noreferrer" aria-label="I Love My Fujitsu on Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 8.8V7.2c0-.7.4-1.1 1.2-1.1h1.9V3h-2.8C11.5 3 10 4.6 10 7.1v1.7H7.8V12H10v9h4v-9h2.8l.5-3.2H14z"></path></svg>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <h2>Navigate</h2>
+        {{ page.footer }}
+      </div>
+      <div class="col-lg-4">
+        <h2>Local Support</h2>
+        <p>Backed in Hawaii by Admor HVAC Products with local inventory, parts, training, and contractor support.</p>
+        <p><strong>(808) 570-0300</strong><br>2928 Kaihikapu Street<br>Honolulu, HI 96819</p>
+      </div>
+    </div>
+    <div class="fujitsu-footer__bottom">
+      <span>&copy; {{ 'now'|date('Y') }} I Love My Fujitsu.</span>
+      <span>Ask your contractor for Fujitsu by name.</span>
+    </div>
+  </div>
+</footer>

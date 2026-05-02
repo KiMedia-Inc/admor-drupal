@@ -1,0 +1,9 @@
+index: true
+priority: '0.6'
+changefreq: monthly
+include_images: false
+default:
+  index: true
+  priority: 0.6
+  changefreq: monthly
+  include_images: false

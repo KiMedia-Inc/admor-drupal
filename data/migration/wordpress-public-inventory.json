@@ -1,0 +1,612 @@
+[
+    {
+        "source_url": "https://ilovemyfujitsu.com/category/featured/",
+        "source_type": "category",
+        "source_path": "/category/featured",
+        "title": "Featured",
+        "suggested_drupal_type": "redirect_only",
+        "target_alias": "/updates",
+        "migration_status": "inventory",
+        "notes": "Category archive: keep for redirect/SEO mapping, do not import as content."
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/category/fujitsu-faces/",
+        "source_type": "category",
+        "source_path": "/category/fujitsu-faces",
+        "title": "Fujitsu Faces",
+        "suggested_drupal_type": "redirect_only",
+        "target_alias": "/friends-family",
+        "migration_status": "inventory",
+        "notes": "Category archive: keep for redirect/SEO mapping, do not import as content."
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/category/home/",
+        "source_type": "category",
+        "source_path": "/category/home",
+        "title": "Home",
+        "suggested_drupal_type": "redirect_only",
+        "target_alias": "/category/home",
+        "migration_status": "inventory",
+        "notes": "Category archive: keep for redirect/SEO mapping, do not import as content."
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/category/uncategorized/",
+        "source_type": "category",
+        "source_path": "/category/uncategorized",
+        "title": "Uncategorized",
+        "suggested_drupal_type": "redirect_only",
+        "target_alias": "/category/uncategorized",
+        "migration_status": "inventory",
+        "notes": "Category archive: keep for redirect/SEO mapping, do not import as content."
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/category/updates/",
+        "source_type": "category",
+        "source_path": "/category/updates",
+        "title": "Updates",
+        "suggested_drupal_type": "redirect_only",
+        "target_alias": "/updates",
+        "migration_status": "inventory",
+        "notes": "Category archive: keep for redirect/SEO mapping, do not import as content."
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/",
+        "source_type": "page",
+        "source_path": "/",
+        "title": "Untitled",
+        "suggested_drupal_type": "page",
+        "target_alias": "/",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/commercials/",
+        "source_type": "page",
+        "source_path": "/commercials",
+        "title": "Commercials",
+        "suggested_drupal_type": "commercial_video",
+        "target_alias": "/commercials/commercials",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/find-a-fujitsu-contractor/",
+        "source_type": "page",
+        "source_path": "/find-a-fujitsu-contractor",
+        "title": "Find A Fujitsu Contractor",
+        "suggested_drupal_type": "page",
+        "target_alias": "/find-a-contractor",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/friends-family/",
+        "source_type": "page",
+        "source_path": "/friends-family",
+        "title": "Friends Family",
+        "suggested_drupal_type": "page",
+        "target_alias": "/friends-family",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/home/",
+        "source_type": "page",
+        "source_path": "/home",
+        "title": "Home",
+        "suggested_drupal_type": "page",
+        "target_alias": "/",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/i-love-my-fujitsu-athlete-application/",
+        "source_type": "page",
+        "source_path": "/i-love-my-fujitsu-athlete-application",
+        "title": "I Love My Fujitsu Athlete Application",
+        "suggested_drupal_type": "page",
+        "target_alias": "/i-love-my-fujitsu-athletics-application",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/locate-a-fujitsu-contractor/",
+        "source_type": "page",
+        "source_path": "/locate-a-fujitsu-contractor",
+        "title": "Locate A Fujitsu Contractor",
+        "suggested_drupal_type": "page",
+        "target_alias": "/locate-a-fujitsu-contractor",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/maintenance-tips/",
+        "source_type": "page",
+        "source_path": "/maintenance-tips",
+        "title": "Maintenance Tips",
+        "suggested_drupal_type": "page",
+        "target_alias": "/maintenance-tips",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/mason2021_2022/",
+        "source_type": "page",
+        "source_path": "/mason2021_2022",
+        "title": "Mason2021 2022",
+        "suggested_drupal_type": "page",
+        "target_alias": "/mason2021_2022",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/oahu-fujitsu-dealers/",
+        "source_type": "page",
+        "source_path": "/oahu-fujitsu-dealers",
+        "title": "Oahu Fujitsu Dealers",
+        "suggested_drupal_type": "page",
+        "target_alias": "/find-a-dealer/oahu-dealers",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/products/",
+        "source_type": "page",
+        "source_path": "/products",
+        "title": "Products",
+        "suggested_drupal_type": "page",
+        "target_alias": "/products",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/rebates/",
+        "source_type": "page",
+        "source_path": "/rebates",
+        "title": "Rebates",
+        "suggested_drupal_type": "resource_brochure",
+        "target_alias": "/resources/rebates",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/resources/",
+        "source_type": "page",
+        "source_path": "/resources",
+        "title": "Resources",
+        "suggested_drupal_type": "page",
+        "target_alias": "/resources",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/tech-tips/",
+        "source_type": "page",
+        "source_path": "/tech-tips",
+        "title": "Tech Tips",
+        "suggested_drupal_type": "page",
+        "target_alias": "/tech-tips",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/20/2014-coolingcancer-charity-golf-tournament/",
+        "source_type": "post",
+        "source_path": "/2019/04/20/2014-coolingcancer-charity-golf-tournament",
+        "title": "2014 Coolingcancer Charity Golf Tournament",
+        "suggested_drupal_type": "news_update",
+        "target_alias": "/updates/2014-coolingcancer-charity-golf-tournament",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/20/donations-cool-schools/",
+        "source_type": "post",
+        "source_path": "/2019/04/20/donations-cool-schools",
+        "title": "Donations Cool Schools",
+        "suggested_drupal_type": "news_update",
+        "target_alias": "/updates/donations-cool-schools",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/20/fujitsu-autograph-signing/",
+        "source_type": "post",
+        "source_path": "/2019/04/20/fujitsu-autograph-signing",
+        "title": "Fujitsu Autograph Signing",
+        "suggested_drupal_type": "news_update",
+        "target_alias": "/updates/fujitsu-autograph-signing",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/21/2015-coolingcancer-golf-tournament/",
+        "source_type": "post",
+        "source_path": "/2019/04/21/2015-coolingcancer-golf-tournament",
+        "title": "2015 Coolingcancer Golf Tournament",
+        "suggested_drupal_type": "news_update",
+        "target_alias": "/updates/2015-coolingcancer-golf-tournament",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/21/2016-coolingcancer-golf-tournament/",
+        "source_type": "post",
+        "source_path": "/2019/04/21/2016-coolingcancer-golf-tournament",
+        "title": "2016 Coolingcancer Golf Tournament",
+        "suggested_drupal_type": "news_update",
+        "target_alias": "/updates/2016-coolingcancer-golf-tournament",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/21/2017-coolingcancer-golf-tournament/",
+        "source_type": "post",
+        "source_path": "/2019/04/21/2017-coolingcancer-golf-tournament",
+        "title": "2017 Coolingcancer Golf Tournament",
+        "suggested_drupal_type": "news_update",
+        "target_alias": "/updates/2017-coolingcancer-golf-tournament",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/21/airstage-on-broadway/",
+        "source_type": "post",
+        "source_path": "/2019/04/21/airstage-on-broadway",
+        "title": "Airstage On Broadway",
+        "suggested_drupal_type": "news_update",
+        "target_alias": "/updates/airstage-on-broadway",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/21/coolest-class-contest-winners/",
+        "source_type": "post",
+        "source_path": "/2019/04/21/coolest-class-contest-winners",
+        "title": "Coolest Class Contest Winners",
+        "suggested_drupal_type": "news_update",
+        "target_alias": "/updates/coolest-class-contest-winners",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/21/coolingcancer-donates-45k/",
+        "source_type": "post",
+        "source_path": "/2019/04/21/coolingcancer-donates-45k",
+        "title": "Coolingcancer Donates 45k",
+        "suggested_drupal_type": "news_update",
+        "target_alias": "/updates/coolingcancer-donates-45k",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/21/coolingcancer-donates-50k/",
+        "source_type": "post",
+        "source_path": "/2019/04/21/coolingcancer-donates-50k",
+        "title": "Coolingcancer Donates 50k",
+        "suggested_drupal_type": "news_update",
+        "target_alias": "/updates/coolingcancer-donates-50k",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/21/find-a-fujitsu-contractor/",
+        "source_type": "post",
+        "source_path": "/2019/04/21/find-a-fujitsu-contractor",
+        "title": "Find A Fujitsu Contractor",
+        "suggested_drupal_type": "news_update",
+        "target_alias": "/updates/find-a-fujitsu-contractor",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/21/fujitsus-infinite-comfort-app/",
+        "source_type": "post",
+        "source_path": "/2019/04/21/fujitsus-infinite-comfort-app",
+        "title": "Fujitsus Infinite Comfort App",
+        "suggested_drupal_type": "news_update",
+        "target_alias": "/updates/fujitsus-infinite-comfort-app",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/21/w-oahu-schools-receive-donation/",
+        "source_type": "post",
+        "source_path": "/2019/04/21/w-oahu-schools-receive-donation",
+        "title": "W Oahu Schools Receive Donation",
+        "suggested_drupal_type": "news_update",
+        "target_alias": "/updates/w-oahu-schools-receive-donation",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/22/commercials/",
+        "source_type": "post",
+        "source_path": "/2019/04/22/commercials",
+        "title": "Commercials",
+        "suggested_drupal_type": "commercial_video",
+        "target_alias": "/commercials/commercials",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/22/updates/",
+        "source_type": "post",
+        "source_path": "/2019/04/22/updates",
+        "title": "Updates",
+        "suggested_drupal_type": "news_update",
+        "target_alias": "/updates/updates",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/23/ashlee-kozuma/",
+        "source_type": "post",
+        "source_path": "/2019/04/23/ashlee-kozuma",
+        "title": "Ashlee Kozuma",
+        "suggested_drupal_type": "face_profile",
+        "target_alias": "/friends-family/ashlee-kozuma",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/23/ashley-jardine/",
+        "source_type": "post",
+        "source_path": "/2019/04/23/ashley-jardine",
+        "title": "Ashley Jardine",
+        "suggested_drupal_type": "face_profile",
+        "target_alias": "/friends-family/ashley-jardine",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/23/benny-agbani/",
+        "source_type": "post",
+        "source_path": "/2019/04/23/benny-agbani",
+        "title": "Benny Agbani",
+        "suggested_drupal_type": "face_profile",
+        "target_alias": "/friends-family/benny-agbani",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/23/chelsea-hardin/",
+        "source_type": "post",
+        "source_path": "/2019/04/23/chelsea-hardin",
+        "title": "Chelsea Hardin",
+        "suggested_drupal_type": "face_profile",
+        "target_alias": "/friends-family/chelsea-hardin",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/23/dave-shoji/",
+        "source_type": "post",
+        "source_path": "/2019/04/23/dave-shoji",
+        "title": "Dave Shoji",
+        "suggested_drupal_type": "face_profile",
+        "target_alias": "/friends-family/dave-shoji",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/23/drew-santos/",
+        "source_type": "post",
+        "source_path": "/2019/04/23/drew-santos",
+        "title": "Drew Santos",
+        "suggested_drupal_type": "face_profile",
+        "target_alias": "/friends-family/drew-santos",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/23/fujitsus-gym-dog/",
+        "source_type": "post",
+        "source_path": "/2019/04/23/fujitsus-gym-dog",
+        "title": "Fujitsus Gym Dog",
+        "suggested_drupal_type": "commercial_video",
+        "target_alias": "/commercials/fujitsus-gym-dog",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/23/jack-ito/",
+        "source_type": "post",
+        "source_path": "/2019/04/23/jack-ito",
+        "title": "Jack Ito",
+        "suggested_drupal_type": "face_profile",
+        "target_alias": "/friends-family/jack-ito",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/23/kaui-kauhi/",
+        "source_type": "post",
+        "source_path": "/2019/04/23/kaui-kauhi",
+        "title": "Kaui Kauhi",
+        "suggested_drupal_type": "face_profile",
+        "target_alias": "/friends-family/kaui-kauhi",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/23/keli-santos/",
+        "source_type": "post",
+        "source_path": "/2019/04/23/keli-santos",
+        "title": "Keli Santos",
+        "suggested_drupal_type": "face_profile",
+        "target_alias": "/friends-family/keli-santos",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/23/rich-miano/",
+        "source_type": "post",
+        "source_path": "/2019/04/23/rich-miano",
+        "title": "Rich Miano",
+        "suggested_drupal_type": "face_profile",
+        "target_alias": "/friends-family/rich-miano",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/23/riley-graves-lock/",
+        "source_type": "post",
+        "source_path": "/2019/04/23/riley-graves-lock",
+        "title": "Riley Graves Lock",
+        "suggested_drupal_type": "face_profile",
+        "target_alias": "/friends-family/riley-graves-lock",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/23/stephanie-wang/",
+        "source_type": "post",
+        "source_path": "/2019/04/23/stephanie-wang",
+        "title": "Stephanie Wang",
+        "suggested_drupal_type": "face_profile",
+        "target_alias": "/friends-family/stephanie-wang",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/23/wangs-world-of-fujitsu-2/",
+        "source_type": "post",
+        "source_path": "/2019/04/23/wangs-world-of-fujitsu-2",
+        "title": "Wangs World Of Fujitsu 2",
+        "suggested_drupal_type": "commercial_video",
+        "target_alias": "/commercials/wangs-world-of-fujitsu-2",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/04/23/wangs-world-of-fujitsu/",
+        "source_type": "post",
+        "source_path": "/2019/04/23/wangs-world-of-fujitsu",
+        "title": "Wangs World Of Fujitsu",
+        "suggested_drupal_type": "commercial_video",
+        "target_alias": "/commercials/wangs-world-of-fujitsu",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2019/05/28/coolingcancer-donates-70k-2/",
+        "source_type": "post",
+        "source_path": "/2019/05/28/coolingcancer-donates-70k-2",
+        "title": "Coolingcancer Donates 70k 2",
+        "suggested_drupal_type": "news_update",
+        "target_alias": "/updates/coolingcancer-donates-70k-2",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2020/02/21/coolingcancer-donates-70k/",
+        "source_type": "post",
+        "source_path": "/2020/02/21/coolingcancer-donates-70k",
+        "title": "Coolingcancer Donates 70k",
+        "suggested_drupal_type": "news_update",
+        "target_alias": "/updates/coolingcancer-donates-70k",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2020/06/03/hawaii-energy-rebates/",
+        "source_type": "post",
+        "source_path": "/2020/06/03/hawaii-energy-rebates",
+        "title": "Hawaii Energy Rebates",
+        "suggested_drupal_type": "resource_brochure",
+        "target_alias": "/resources/hawaii-energy-rebates",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2020/08/06/fujitsu-12-year-gecko-warranty/",
+        "source_type": "post",
+        "source_path": "/2020/08/06/fujitsu-12-year-gecko-warranty",
+        "title": "Fujitsu 12 Year Gecko Warranty",
+        "suggested_drupal_type": "news_update",
+        "target_alias": "/updates/fujitsu-12-year-gecko-warranty",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2020/08/06/greg-salas/",
+        "source_type": "post",
+        "source_path": "/2020/08/06/greg-salas",
+        "title": "Greg Salas",
+        "suggested_drupal_type": "face_profile",
+        "target_alias": "/friends-family/greg-salas",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2020/08/07/kanoa-leahey/",
+        "source_type": "post",
+        "source_path": "/2020/08/07/kanoa-leahey",
+        "title": "Kanoa Leahey",
+        "suggested_drupal_type": "face_profile",
+        "target_alias": "/friends-family/kanoa-leahey",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2021/05/19/fujitsu-410a-mni-split-troubleshooting-guide/",
+        "source_type": "post",
+        "source_path": "/2021/05/19/fujitsu-410a-mni-split-troubleshooting-guide",
+        "title": "Fujitsu 410a Mni Split Troubleshooting Guide",
+        "suggested_drupal_type": "resource_brochure",
+        "target_alias": "/resources/fujitsu-410a-mni-split-troubleshooting-guide",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2021/06/17/fujitsu-hawaii-on-khon2/",
+        "source_type": "post",
+        "source_path": "/2021/06/17/fujitsu-hawaii-on-khon2",
+        "title": "Fujitsu Hawaii On Khon2",
+        "suggested_drupal_type": "news_update",
+        "target_alias": "/updates/fujitsu-hawaii-on-khon2",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2021/11/22/mason-kekoa-nava-macloves-memorial-scholarships/",
+        "source_type": "post",
+        "source_path": "/2021/11/22/mason-kekoa-nava-macloves-memorial-scholarships",
+        "title": "Mason Kekoa Nava Macloves Memorial Scholarships",
+        "suggested_drupal_type": "news_update",
+        "target_alias": "/updates/mason-kekoa-nava-macloves-memorial-scholarships",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2022/05/20/elementor-805/",
+        "source_type": "post",
+        "source_path": "/2022/05/20/elementor-805",
+        "title": "Elementor 805",
+        "suggested_drupal_type": "news_update",
+        "target_alias": "/updates/elementor-805",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2022/05/20/oahu-fujitsu-elite-contractors-vip-reception-may-20th-2022/",
+        "source_type": "post",
+        "source_path": "/2022/05/20/oahu-fujitsu-elite-contractors-vip-reception-may-20th-2022",
+        "title": "Oahu Fujitsu Elite Contractors Vip Reception May 20th 2022",
+        "suggested_drupal_type": "news_update",
+        "target_alias": "/updates/oahu-fujitsu-elite-contractors-vip-reception-may-20th-2022",
+        "migration_status": "inventory",
+        "notes": ""
+    },
+    {
+        "source_url": "https://ilovemyfujitsu.com/2024/06/06/fujitsu-generals-procore-high-corrosion-resistant-techonology/",
+        "source_type": "post",
+        "source_path": "/2024/06/06/fujitsu-generals-procore-high-corrosion-resistant-techonology",
+        "title": "Fujitsu Generals Procore High Corrosion Resistant Techonology",
+        "suggested_drupal_type": "news_update",
+        "target_alias": "/updates/fujitsu-generals-procore-high-corrosion-resistant-techonology",
+        "migration_status": "inventory",
+        "notes": ""
+    }
+]

@@ -1,0 +1,93 @@
+uuid: e552d1f6-849d-447a-a986-051bb1b49a65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.resource_brochure.body
+    - field.field.node.resource_brochure.field_featured
+    - field.field.node.resource_brochure.field_resource_category
+    - field.field.node.resource_brochure.field_resource_file
+    - field.field.node.resource_brochure.field_resource_link
+    - field.field.node.resource_brochure.field_resource_type
+    - field.field.node.resource_brochure.field_sort_order
+    - field.field.node.resource_brochure.field_thumbnail
+    - field.field.node.resource_brochure.field_year
+    - node.type.resource_brochure
+  module:
+    - user
+id: node.resource_brochure.default
+targetEntityType: node
+bundle: resource_brochure
+mode: default
+content:
+  body:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_featured:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_resource_category:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_resource_file:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_resource_link:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_sort_order:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_thumbnail:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_year:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_resource_type: true

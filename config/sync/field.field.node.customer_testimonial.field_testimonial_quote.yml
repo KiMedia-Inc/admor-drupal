@@ -1,0 +1,22 @@
+uuid: b575d39c-bc4e-4926-9b63-34c6e31ad050
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_testimonial_quote
+    - node.type.customer_testimonial
+  module:
+    - text
+id: node.customer_testimonial.field_testimonial_quote
+field_name: field_testimonial_quote
+entity_type: node
+bundle: customer_testimonial
+label: Quote
+description: 'Paste the approved testimonial quote.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

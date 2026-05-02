@@ -1,0 +1,16 @@
+uuid: 7f7c63d5-74d1-4c20-9da1-ea71a8e8159c
+langcode: en
+status: true
+dependencies: {  }
+id: node__news_update
+label: 'Update / News Article'
+tags:
+  title: '[node:title] | Fujitsu Hawaii Updates'
+  description: '[node:field_summary]'
+  canonical_url: '[node:url]'
+  robots: 'index, follow'
+  og_site_name: 'I Love My Fujitsu'
+  og_title: '[node:title] | Fujitsu Hawaii Updates'
+  og_description: '[node:field_summary]'
+  og_type: article
+  og_image: 'https://ilovemyfujitsu.com/themes/custom/ilovemyfujitsu/assets/images/fujitsu-logo.png'

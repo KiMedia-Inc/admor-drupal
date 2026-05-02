@@ -1,0 +1,11 @@
+uuid: 8d8df739-7b68-4565-a9b9-06bd5cab435c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Product / Brochure Resource'
+type: resource_brochure
+description: 'PDFs, brochures, product sheets, rebates, and external Fujitsu resources.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

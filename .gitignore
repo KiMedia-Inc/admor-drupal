@@ -1,4 +1,35 @@
-vendor/
-web/sites/*/files/
-web/sites/*/settings.php
-web/sites/*/settings.local.php
+# Composer dependencies.
+/vendor/
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/libraries/
+
+# Drupal generated files and private runtime state.
+/web/sites/*/files/
+!/web/sites/*/files/.gitkeep
+/web/sites/*/settings.local.php
+/web/sites/*/services.local.yml
+
+# Local databases, dumps, and archives.
+*.sql
+*.sql.gz
+*.sqlite
+*.tar
+*.tar.gz
+*.zip
+/backups/
+/deployment/
+
+# Frontend/runtime tooling.
+/node_modules/
+/.sass-cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS/editor noise.
+.DS_Store
+.idea/
+.vscode/

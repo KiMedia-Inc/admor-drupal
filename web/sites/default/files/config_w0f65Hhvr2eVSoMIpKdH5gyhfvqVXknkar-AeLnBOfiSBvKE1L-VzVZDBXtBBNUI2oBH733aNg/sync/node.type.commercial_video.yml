@@ -1,0 +1,11 @@
+uuid: ef733900-fb9b-4568-a503-528fd1d84d64
+langcode: en
+status: true
+dependencies: {  }
+name: 'Commercial / Video'
+type: commercial_video
+description: 'Fujitsu commercials and video assets.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

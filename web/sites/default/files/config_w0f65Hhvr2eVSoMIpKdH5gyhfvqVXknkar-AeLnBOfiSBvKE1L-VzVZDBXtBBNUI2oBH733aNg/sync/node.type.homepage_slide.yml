@@ -1,0 +1,11 @@
+uuid: 29af7d83-d1c5-440d-b629-f51e36ad1bed
+langcode: en
+status: true
+dependencies: {  }
+name: 'Homepage Slide'
+type: homepage_slide
+description: 'Drupal-managed homepage hero slides.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

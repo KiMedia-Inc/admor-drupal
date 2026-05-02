@@ -1,0 +1,21 @@
+uuid: ec3f71c8-1dc6-47c9-abe6-8381fb06d7b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.fujitsu_cta
+    - field.storage.block_content.field_cta_variant
+  module:
+    - options
+id: block_content.fujitsu_cta.field_cta_variant
+field_name: field_cta_variant
+entity_type: block_content
+bundle: fujitsu_cta
+label: 'CTA variant'
+description: 'Visual treatment for theme templates.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

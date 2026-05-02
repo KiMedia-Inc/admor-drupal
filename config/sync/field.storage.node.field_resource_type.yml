@@ -1,0 +1,36 @@
+uuid: b614d003-04c6-4f38-b739-d56ca71ed52d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_resource_type
+field_name: field_resource_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: brochure
+      label: Brochure
+    -
+      value: rebate
+      label: Rebate
+    -
+      value: guide
+      label: Guide
+    -
+      value: video
+      label: Video
+    -
+      value: external
+      label: 'External link'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

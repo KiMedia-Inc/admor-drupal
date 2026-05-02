@@ -1,0 +1,19 @@
+uuid: 5eed7cf7-590f-4598-b58a-efbc12c1f397
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.admor_hvac
+    - field.storage.contact_message.field_phone
+id: contact_message.admor_hvac.field_phone
+field_name: field_phone
+entity_type: contact_message
+bundle: admor_hvac
+label: Phone
+description: 'Best contact phone number.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

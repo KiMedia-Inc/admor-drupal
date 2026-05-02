@@ -1,0 +1,38 @@
+uuid: 6a71428a-47df-4639-8fe6-27eabf174ee7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_customer_image
+    - node.type.customer_testimonial
+  module:
+    - image
+id: node.customer_testimonial.field_customer_image
+field_name: field_customer_image
+entity_type: node
+bundle: customer_testimonial
+label: Image
+description: 'Optional customer, home, or installed-system image approved for use.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

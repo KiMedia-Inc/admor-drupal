@@ -1,0 +1,7 @@
+ilf_site.home:
+  path: '/home'
+  defaults:
+    _controller: '\Drupal\ilf_site\Controller\HomeController::home'
+    _title: 'I Love My Fujitsu'
+  requirements:
+    _permission: 'access content'

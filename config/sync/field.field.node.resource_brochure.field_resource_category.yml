@@ -1,0 +1,24 @@
+uuid: ac0bce23-173b-4124-adc9-2a46cf10af6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_category
+    - node.type.resource_brochure
+    - taxonomy.vocabulary.resource_type
+id: node.resource_brochure.field_resource_category
+field_name: field_resource_category
+entity_type: node
+bundle: resource_brochure
+label: 'Resource type'
+description: 'Choose the admin-managed resource category.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      resource_type: resource_type
+field_type: entity_reference

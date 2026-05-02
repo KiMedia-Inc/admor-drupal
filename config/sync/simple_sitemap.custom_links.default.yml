@@ -1,0 +1,55 @@
+_core:
+  default_config_hash: 25hWeYa4sasuJtHqKKcEN_nYiuEC1lMPYHsn5dawJEw
+links:
+  -
+    path: /
+    priority: '1.0'
+    changefreq: daily
+  -
+    path: /why-fujitsu
+    priority: '0.9'
+    changefreq: weekly
+  -
+    path: /find-a-contractor
+    priority: '0.9'
+    changefreq: weekly
+  -
+    path: /find-a-dealer
+    priority: '0.9'
+    changefreq: weekly
+  -
+    path: /find-a-dealer/oahu-dealers
+    priority: '0.8'
+    changefreq: weekly
+  -
+    path: /find-a-dealer/maui-dealers
+    priority: '0.8'
+    changefreq: weekly
+  -
+    path: /find-a-dealer/kauai-dealers
+    priority: '0.8'
+    changefreq: weekly
+  -
+    path: /find-a-dealer/big-island-dealers
+    priority: '0.8'
+    changefreq: weekly
+  -
+    path: /products
+    priority: '0.8'
+    changefreq: monthly
+  -
+    path: /commercials
+    priority: '0.7'
+    changefreq: monthly
+  -
+    path: /resources
+    priority: '0.8'
+    changefreq: monthly
+  -
+    path: /updates
+    priority: '0.7'
+    changefreq: weekly
+  -
+    path: /friends-family
+    priority: '0.7'
+    changefreq: monthly

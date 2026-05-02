@@ -1,0 +1,24 @@
+uuid: f4eb1a6a-a67a-4067-9970-eaab12486c73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_competitor_brand
+    - node.type.brand_comparison
+    - taxonomy.vocabulary.competitor_brand
+id: node.brand_comparison.field_competitor_brand
+field_name: field_competitor_brand
+entity_type: node
+bundle: brand_comparison
+label: 'Competitor brand'
+description: 'Select the direct ductless / mini-split competitor being compared.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      competitor_brand: competitor_brand
+field_type: entity_reference

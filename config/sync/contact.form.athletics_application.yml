@@ -1,0 +1,12 @@
+uuid: c568387d-8fc1-4ea6-aa78-7dbc53267d6c
+langcode: en
+status: true
+dependencies: {  }
+id: athletics_application
+label: 'I Love My Fujitsu Athletics Application'
+recipients:
+  - admin@example.com
+reply: ''
+weight: 0
+message: 'Mahalo! We’ll be in touch soon.'
+redirect: ''

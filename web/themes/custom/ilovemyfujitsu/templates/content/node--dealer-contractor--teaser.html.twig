@@ -1,0 +1,18 @@
+<article{{ attributes.addClass('ilf-teaser-card', 'ilf-teaser-card--dealer') }}>
+  <div class="ilf-teaser-card__body">
+    <p class="ilf-teaser-card__type">Certified Fujitsu Contractor</p>
+    <h2><a href="{{ url }}">{{ label }}</a></h2>
+    <div class="ilf-dealer-meta">
+      {% if node.field_island.value %}
+        <p><strong>Island</strong><span>{{ node.field_island.value|replace({'_': ' '})|title }}</span></p>
+      {% endif %}
+      {% if node.field_phone.value %}
+        <p><strong>Phone</strong><span>{{ node.field_phone.value }}</span></p>
+      {% endif %}
+      {% if node.field_address.value %}
+        <p><strong>Service area</strong><span>{{ node.field_address.value|striptags }}</span></p>
+      {% endif %}
+    </div>
+    <a class="ilf-teaser-card__link" href="{{ url }}">View contractor</a>
+  </div>
+</article>

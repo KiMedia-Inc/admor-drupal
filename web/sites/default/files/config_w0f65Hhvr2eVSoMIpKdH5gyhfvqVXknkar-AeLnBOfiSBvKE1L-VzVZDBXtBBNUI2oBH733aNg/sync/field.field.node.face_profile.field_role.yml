@@ -1,0 +1,19 @@
+uuid: 9a06e10a-fa6f-4d67-af78-d912d361fe47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_role
+    - node.type.face_profile
+id: node.face_profile.field_role
+field_name: field_role
+entity_type: node
+bundle: face_profile
+label: 'Role / relationship'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

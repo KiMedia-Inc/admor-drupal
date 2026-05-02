@@ -1,0 +1,2278 @@
+:root {
+  --fuji-red: #c8102e;
+  --fuji-red-dark: #8f1025;
+  --fuji-red-deep: #3a090f;
+  --fuji-red-black: #211316;
+  --fuji-ink: #2a171b;
+  --fuji-muted: #756367;
+  --fuji-line: #eadadd;
+  --fuji-soft: #fff6f7;
+  --fuji-warm: #fbf3f4;
+  --fuji-white: #ffffff;
+  --fuji-shadow-soft: 0 18px 48px rgba(58, 9, 15, .07);
+  --fuji-shadow-lift: 0 24px 64px rgba(58, 9, 15, .12);
+  --fuji-section-y: clamp(58px, 7vw, 96px);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.fujitsu-site {
+  color: var(--fuji-ink);
+  background: var(--fuji-white);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+.fujitsu-site a {
+  color: var(--fuji-red-dark);
+  text-decoration: none;
+}
+
+.fujitsu-site a:hover {
+  color: var(--fuji-red);
+  text-decoration: none;
+}
+
+.fujitsu-site :focus-visible {
+  outline: 3px solid rgba(200, 16, 46, .35);
+  outline-offset: 3px;
+}
+
+.fujitsu-site .field--name-body a,
+.fujitsu-site .ilf-teaser-card a:not(.ilf-teaser-card__link),
+.fujitsu-site .ilf-page a {
+  color: var(--fuji-red-dark);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.fujitsu-site .field--name-body a:hover,
+.fujitsu-site .ilf-teaser-card a:not(.ilf-teaser-card__link):hover,
+.fujitsu-site .ilf-page a:hover {
+  color: var(--fuji-red);
+}
+
+.fujitsu-site .field--name-body a.btn-main,
+.fujitsu-site .ilf-teaser-card a.btn-main,
+.fujitsu-site .ilf-page a.btn-main {
+  color: #fff;
+}
+
+.fujitsu-site .field--name-body a.btn-main:hover,
+.fujitsu-site .ilf-teaser-card a.btn-main:hover,
+.fujitsu-site .ilf-page a.btn-main:hover {
+  color: #fff;
+}
+
+.visually-hidden.focusable:focus {
+  position: fixed;
+  z-index: 10000;
+  left: 16px;
+  top: 16px;
+  width: auto;
+  height: auto;
+  padding: 10px 14px;
+  background: var(--fuji-red-deep);
+  color: #fff;
+}
+
+.fujitsu-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, .96);
+  border-bottom: 1px solid var(--fuji-line);
+  backdrop-filter: blur(14px);
+}
+
+.fujitsu-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 78px;
+}
+
+.fujitsu-logo img {
+  display: block;
+  width: min(190px, 34vw);
+  height: auto;
+}
+
+.fujitsu-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.fujitsu-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fujitsu-menu,
+.fujitsu-menu__sub {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.fujitsu-menu__item {
+  position: relative;
+}
+
+.fujitsu-menu__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 12px;
+  color: var(--fuji-red-black);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.fujitsu-menu__link:hover {
+  color: var(--fuji-red);
+}
+
+.fujitsu-menu__item--active-trail > .fujitsu-menu__link,
+.fujitsu-menu__link.is-active {
+  color: var(--fuji-red);
+}
+
+.fujitsu-menu__sub {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 230px;
+  display: none;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid var(--fuji-line);
+  box-shadow: 0 18px 50px rgba(58, 9, 15, .14);
+}
+
+.fujitsu-menu__item:hover > .fujitsu-menu__sub,
+.fujitsu-menu__item:focus-within > .fujitsu-menu__sub {
+  display: flex;
+}
+
+.fujitsu-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.fujitsu-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--fuji-line);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--fuji-red-dark);
+  line-height: 1;
+  text-decoration: none;
+  transition: background .18s ease, border-color .18s ease, color .18s ease, transform .18s ease;
+}
+
+.fujitsu-social svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.fujitsu-social svg path {
+  fill: currentColor;
+  stroke: none;
+}
+
+.fujitsu-social a:hover {
+  border-color: var(--fuji-red);
+  background: var(--fuji-red);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.fujitsu-site .fujitsu-header__cta,
+.fujitsu-site .btn-main {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 13px 20px;
+  border-radius: 4px;
+  border: 2px solid var(--fuji-red);
+  background: var(--fuji-red);
+  color: #fff;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(200, 16, 46, .24);
+  transition: background .18s ease, border-color .18s ease, color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+.fujitsu-site .btn-main:hover,
+.fujitsu-site .fujitsu-header__cta:hover {
+  background: var(--fuji-red-dark);
+  border-color: var(--fuji-red-dark);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.fujitsu-site .btn-outline {
+  background: transparent;
+  color: var(--fuji-red);
+  box-shadow: none;
+}
+
+.fujitsu-hero .btn-outline {
+  background: rgba(255, 255, 255, .7);
+  color: var(--fuji-red-dark);
+}
+
+.btn-outline:hover {
+  background: var(--fuji-red);
+  border-color: var(--fuji-red);
+  color: #fff;
+}
+
+.fujitsu-hero {
+  padding: clamp(72px, 9vw, 132px) 0 clamp(50px, 7vw, 92px);
+  background:
+    radial-gradient(circle at 82% 20%, rgba(200, 16, 46, .28), transparent 30%),
+    linear-gradient(115deg, rgba(255,255,255,.98) 0%, rgba(255,246,247,.96) 48%, rgba(143,16,37,.24) 100%);
+}
+
+.fujitsu-hero--managed {
+  background:
+    linear-gradient(110deg, rgba(33, 19, 22, .88) 0%, rgba(58, 9, 15, .72) 38%, rgba(200, 16, 46, .16) 100%),
+    radial-gradient(circle at 80% 18%, rgba(200, 16, 46, .42), transparent 28%),
+    var(--fuji-red-deep);
+}
+
+.fujitsu-hero.fujitsu-hero--managed .fujitsu-eyebrow,
+.fujitsu-hero.fujitsu-hero--managed h1,
+.fujitsu-hero.fujitsu-hero--managed .fujitsu-hero__lead,
+.fujitsu-hero.fujitsu-hero--managed .fujitsu-hero__lead p {
+  color: #fff;
+}
+
+.fujitsu-hero--managed .fujitsu-hero__lead h2 {
+  display: none;
+}
+
+.fujitsu-hero--managed .fujitsu-trust-row span {
+  background: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .24);
+  color: #fff;
+}
+
+.fujitsu-eyebrow {
+  color: var(--fuji-red);
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-weight: 900;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.fujitsu-hero h1,
+.fujitsu-section-heading h2,
+.fujitsu-contractor-flow h2,
+.fujitsu-feature-band h2,
+.fujitsu-resources h2 {
+  color: var(--fuji-red-black);
+  letter-spacing: 0;
+}
+
+.fujitsu-hero h1 {
+  max-width: 760px;
+  margin-bottom: 24px;
+  font-size: clamp(46px, 6vw, 84px);
+  line-height: .96;
+}
+
+.fujitsu-hero__lead {
+  max-width: 650px;
+  color: var(--fuji-muted);
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.55;
+}
+
+.fujitsu-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 30px 0 26px;
+}
+
+.fujitsu-trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.fujitsu-trust-row span {
+  display: inline-flex;
+  padding: 9px 12px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid var(--fuji-line);
+  color: var(--fuji-red-black);
+  font-weight: 800;
+  box-shadow: 0 8px 24px rgba(58, 9, 15, .07);
+}
+
+.fujitsu-hero__image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 30px 80px rgba(58, 9, 15, .22);
+}
+
+.fujitsu-hero__image img {
+  width: 100%;
+  aspect-ratio: 1.05;
+  object-fit: cover;
+}
+
+.fujitsu-hero__badge {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  max-width: 260px;
+  padding: 18px;
+  background: var(--fuji-red);
+  color: #fff;
+  border-radius: 6px;
+}
+
+.fujitsu-hero__badge strong,
+.fujitsu-hero__badge span {
+  display: block;
+}
+
+.fujitsu-hero__badge strong {
+  font-size: 22px;
+}
+
+.fujitsu-pull,
+.fujitsu-why,
+.fujitsu-contractor-flow,
+.fujitsu-feature-band,
+.fujitsu-stories,
+.fujitsu-home-faces,
+.fujitsu-resources {
+  padding: var(--fuji-section-y) 0;
+}
+
+.fujitsu-pull,
+.fujitsu-home-faces,
+.fujitsu-resources {
+  background: #fff;
+}
+
+.fujitsu-pull--featured {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 16% 0%, rgba(255, 255, 255, .16), transparent 26%),
+    radial-gradient(circle at 88% 12%, rgba(200, 16, 46, .36), transparent 28%),
+    linear-gradient(135deg, var(--fuji-red-deep) 0%, var(--fuji-red-dark) 58%, var(--fuji-red) 100%);
+}
+
+.fujitsu-pull--featured .fujitsu-section-heading .fujitsu-eyebrow,
+.fujitsu-pull--featured .fujitsu-section-heading h2,
+.fujitsu-pull--featured .fujitsu-section-heading p {
+  color: #fff;
+}
+
+.fujitsu-pull--featured .fujitsu-section-heading p:last-child {
+  color: rgba(255, 255, 255, .82);
+}
+
+.fujitsu-pull--featured .fujitsu-story-card {
+  border-color: rgba(255, 255, 255, .16);
+  box-shadow: 0 24px 70px rgba(33, 19, 22, .28);
+}
+
+.fujitsu-pull--featured .fujitsu-story-card:hover {
+  border-color: rgba(255, 255, 255, .45);
+}
+
+.fujitsu-why {
+  background: #fff;
+}
+
+.fujitsu-why__intro {
+  max-width: 980px;
+  margin-bottom: 34px;
+}
+
+.fujitsu-why__intro h2 {
+  max-width: 920px;
+  color: var(--fuji-red-black);
+  font-size: clamp(34px, 4.8vw, 64px);
+  line-height: 1.04;
+}
+
+.fujitsu-why__intro p:last-child {
+  max-width: 900px;
+  color: var(--fuji-muted);
+  font-size: 19px;
+  line-height: 1.65;
+}
+
+.fujitsu-why__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.fujitsu-why__grid article {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 24px;
+  border: 1px solid var(--fuji-line);
+  border-top: 4px solid var(--fuji-red);
+  border-radius: 8px;
+  background: var(--fuji-soft);
+  box-shadow: var(--fuji-shadow-soft);
+}
+
+.fujitsu-why__grid span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 34px;
+  margin-bottom: 18px;
+  border-radius: 4px;
+  background: var(--fuji-red);
+  color: #fff;
+  font-weight: 900;
+}
+
+.fujitsu-why__grid h3 {
+  color: var(--fuji-red-black);
+  font-size: 22px;
+  line-height: 1.15;
+}
+
+.fujitsu-why__grid p {
+  margin-bottom: 0;
+  color: var(--fuji-muted);
+  font-size: 16px;
+  line-height: 1.58;
+}
+
+.fujitsu-why__compare {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 24px;
+  padding: clamp(24px, 4vw, 38px);
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--fuji-red-deep), var(--fuji-red-dark));
+  color: #fff;
+}
+
+.fujitsu-why__compare h3,
+.fujitsu-why__compare p {
+  color: #fff;
+}
+
+.fujitsu-why__compare h3 {
+  margin-bottom: 8px;
+  font-size: clamp(24px, 3vw, 36px);
+  line-height: 1.1;
+}
+
+.fujitsu-why__compare p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.fujitsu-why__compare .fujitsu-actions {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.fujitsu-why__compare .btn-outline {
+  background: #fff;
+  color: var(--fuji-red-dark);
+}
+
+.fujitsu-section-heading {
+  max-width: 820px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.fujitsu-section-heading--left {
+  max-width: 840px;
+  margin-right: 0;
+  margin-left: 0;
+  text-align: left;
+}
+
+.fujitsu-section-heading p:last-child,
+.fujitsu-contractor-flow p,
+.fujitsu-feature-band p,
+.fujitsu-resources p {
+  color: var(--fuji-muted);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.fujitsu-proof-card,
+.fujitsu-feature-card,
+.fujitsu-story-card {
+  height: 100%;
+  background: #fff;
+  border: 1px solid var(--fuji-line);
+  border-radius: 8px;
+  box-shadow: var(--fuji-shadow-soft);
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+.fujitsu-proof-card:hover,
+.fujitsu-story-card:hover,
+.ilf-card-grid article:hover,
+.ilf-teaser-card:hover {
+  border-color: rgba(200, 16, 46, .38);
+  box-shadow: var(--fuji-shadow-lift);
+  transform: translateY(-2px);
+}
+
+.fujitsu-proof-card {
+  padding: 28px;
+}
+
+.fujitsu-proof-card span {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 22px;
+  background: rgba(200, 16, 46, .1);
+  color: var(--fuji-red);
+  border-radius: 4px;
+  font-weight: 900;
+}
+
+.fujitsu-proof-card h3,
+.fujitsu-flow-grid h3,
+.fujitsu-feature-card h3,
+.fujitsu-story-card h3 {
+  color: var(--fuji-red-black);
+}
+
+.fujitsu-contractor-flow,
+.fujitsu-stories {
+  background: var(--fuji-soft);
+}
+
+.fujitsu-flow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.fujitsu-flow-grid--locations {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.fujitsu-managed-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.fujitsu-managed-grid--slides {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.fujitsu-flow-grid div {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  background: #fff;
+  border-top: 4px solid var(--fuji-red);
+  border-radius: 8px;
+  box-shadow: var(--fuji-shadow-soft);
+}
+
+.fujitsu-flow-grid div .btn-main {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.fujitsu-flow-grid strong {
+  display: block;
+  color: var(--fuji-red);
+  font-size: 42px;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.fujitsu-feature-band {
+  background: linear-gradient(135deg, var(--fuji-red-deep), var(--fuji-red-dark));
+}
+
+.fujitsu-feature-band h2,
+.fujitsu-feature-band p,
+.fujitsu-feature-band .fujitsu-eyebrow {
+  color: #fff;
+}
+
+.fujitsu-feature-band .fujitsu-feature-card h2,
+.fujitsu-feature-band .fujitsu-feature-card h3,
+.fujitsu-feature-band .fujitsu-feature-card p {
+  color: var(--fuji-red-black);
+}
+
+.fujitsu-feature-card {
+  padding: 30px;
+}
+
+.fujitsu-feature-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.fujitsu-feature-card li + li {
+  margin-top: 10px;
+}
+
+.fujitsu-story-card {
+  overflow: hidden;
+}
+
+.fujitsu-story-card img {
+  width: 100%;
+  aspect-ratio: 1.35;
+  object-fit: cover;
+}
+
+.fujitsu-story-card h3,
+.fujitsu-story-card p,
+.fujitsu-story-card a {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.fujitsu-story-card h3 {
+  margin-top: 24px;
+}
+
+.fujitsu-story-card a {
+  display: inline-flex;
+  margin-bottom: 24px;
+  color: var(--fuji-red);
+  font-weight: 900;
+}
+
+.fujitsu-face-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.fujitsu-face-strip a {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid var(--fuji-line);
+  border-radius: 8px;
+  background: var(--fuji-soft);
+  box-shadow: var(--fuji-shadow-soft);
+}
+
+.fujitsu-face-strip a:hover {
+  border-color: var(--fuji-red);
+  transform: translateY(-2px);
+}
+
+.fujitsu-face-strip img {
+  width: 100%;
+  aspect-ratio: .875;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.fujitsu-face-strip strong {
+  padding: 16px;
+  color: var(--fuji-red-black);
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.fujitsu-centered-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.fujitsu-resource-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.fujitsu-resource-grid a {
+  min-height: 112px;
+  display: flex;
+  align-items: end;
+  padding: 18px;
+  border-radius: 8px;
+  background: var(--fuji-soft);
+  border: 1px solid var(--fuji-line);
+  color: var(--fuji-red-black);
+  font-weight: 900;
+}
+
+.fujitsu-resource-grid a:hover {
+  background: var(--fuji-red);
+  color: #fff;
+}
+
+.fujitsu-cta-strip {
+  padding: clamp(34px, 5vw, 56px) 0;
+  background: var(--fuji-red);
+}
+
+.fujitsu-cta-strip__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.fujitsu-cta-strip h2,
+.fujitsu-cta-strip p {
+  color: #fff;
+}
+
+.fujitsu-cta-strip h2,
+.fujitsu-cta-strip p {
+  margin: 0;
+}
+
+.fujitsu-cta-strip .btn-main {
+  flex: 0 0 auto;
+  background: #fff;
+  color: var(--fuji-red);
+}
+
+.fujitsu-footer {
+  padding: 70px 0 24px;
+  background: var(--fuji-red-deep);
+  color: rgba(255,255,255,.78);
+}
+
+.fujitsu-footer__logo {
+  width: 220px;
+  max-width: 100%;
+  margin-bottom: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.fujitsu-footer h2 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.fujitsu-footer strong {
+  color: #fff;
+}
+
+.fujitsu-footer a {
+  color: rgba(255, 255, 255, .78);
+}
+
+.fujitsu-footer a:hover {
+  color: #fff;
+}
+
+.fujitsu-footer .fujitsu-social {
+  margin-top: 22px;
+}
+
+.fujitsu-footer .fujitsu-social a {
+  border-color: rgba(255, 255, 255, .18);
+  background: rgba(255, 255, 255, .08);
+  color: #fff;
+}
+
+.fujitsu-footer .fujitsu-social a:hover {
+  border-color: #fff;
+  background: #fff;
+  color: var(--fuji-red-dark);
+}
+
+.fujitsu-footer .fujitsu-menu,
+.fujitsu-footer .fujitsu-menu__sub {
+  display: block;
+}
+
+.fujitsu-footer .fujitsu-menu__item + .fujitsu-menu__item {
+  margin-top: 8px;
+}
+
+.fujitsu-footer .fujitsu-menu__link {
+  min-height: 0;
+  padding: 0;
+  color: rgba(255, 255, 255, .72);
+  font-size: 14px;
+}
+
+.fujitsu-footer .fujitsu-menu__sub {
+  position: static;
+  min-width: 0;
+  margin: 8px 0 0 14px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.fujitsu-footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 44px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,255,255,.16);
+  color: rgba(255,255,255,.62);
+}
+
+.fujitsu-page-hero {
+  padding: clamp(56px, 8vw, 96px) 0;
+  background:
+    radial-gradient(circle at 80% 10%, rgba(255, 255, 255, .16), transparent 34%),
+    linear-gradient(110deg, var(--fuji-red-deep), var(--fuji-red-dark));
+  color: #fff;
+}
+
+.fujitsu-page-hero h1 {
+  max-width: 900px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 1;
+}
+
+.fujitsu-page-body {
+  padding: clamp(52px, 7vw, 88px) 0;
+}
+
+.ilf-content-band {
+  max-width: 920px;
+  margin: 0 auto 40px;
+}
+
+.ilf-content-band--intro {
+  text-align: center;
+}
+
+.ilf-kicker {
+  margin-bottom: 10px;
+  color: var(--fuji-red);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.ilf-content-band h2,
+.ilf-comparison h2,
+.ilf-callout h2 {
+  margin-bottom: 16px;
+  color: var(--fuji-red-black);
+  font-size: clamp(30px, 4vw, 52px);
+  line-height: 1.06;
+}
+
+.ilf-content-band p,
+.ilf-card-grid p,
+.ilf-callout p,
+.ilf-comparison span {
+  color: var(--fuji-muted);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.ilf-card-grid {
+  display: grid;
+  gap: 18px;
+  margin: 34px 0;
+}
+
+.ilf-card-grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ilf-card-grid--four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.ilf-card-grid--five {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.ilf-compare-hub-grid article {
+  display: flex;
+  flex-direction: column;
+}
+
+.ilf-compare-hub-grid .btn-main {
+  align-self: flex-start;
+  margin-top: auto;
+  white-space: normal;
+}
+
+.ilf-card-grid article,
+.ilf-island-grid a,
+.ilf-resource-list a {
+  border: 1px solid var(--fuji-line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--fuji-shadow-soft);
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease, background .18s ease, color .18s ease;
+}
+
+.ilf-card-grid article {
+  padding: 26px;
+  border-top: 4px solid var(--fuji-red);
+}
+
+.ilf-card-grid h3,
+.ilf-island-grid strong {
+  color: var(--fuji-red-black);
+}
+
+.ilf-comparison {
+  margin-top: 46px;
+  padding: clamp(28px, 4vw, 46px);
+  border-radius: 8px;
+  background: var(--fuji-soft);
+}
+
+.ilf-comparison__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.ilf-comparison__grid div {
+  padding: 20px;
+  background: #fff;
+  border-radius: 6px;
+}
+
+.ilf-comparison strong,
+.ilf-comparison span {
+  display: block;
+}
+
+.ilf-comparison strong {
+  color: var(--fuji-red);
+}
+
+.ilf-island-grid,
+.ilf-resource-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin: 34px 0;
+}
+
+.ilf-island-grid a,
+.ilf-resource-list a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 154px;
+  padding: 24px;
+  color: var(--fuji-ink);
+}
+
+.ilf-island-grid a:hover,
+.ilf-resource-list a:hover {
+  border-color: var(--fuji-red);
+  box-shadow: var(--fuji-shadow-lift);
+  transform: translateY(-2px);
+}
+
+.ilf-island-grid span {
+  color: var(--fuji-muted);
+}
+
+.ilf-resource-list a {
+  min-height: 112px;
+  justify-content: end;
+  color: var(--fuji-red-black);
+  font-weight: 900;
+}
+
+.ilf-callout {
+  margin-top: 46px;
+  padding: clamp(28px, 4vw, 48px);
+  border-radius: 8px;
+  background: var(--fuji-red);
+  color: #fff;
+}
+
+.ilf-callout h2,
+.ilf-callout p {
+  color: #fff;
+}
+
+.ilf-callout .btn-outline {
+  background: #fff;
+  color: var(--fuji-red-dark);
+}
+
+.ilf-detail-card {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: clamp(28px, 5vw, 54px);
+  border: 1px solid var(--fuji-line);
+  border-top: 4px solid var(--fuji-red);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--fuji-shadow-soft);
+}
+
+.ilf-detail-card .field {
+  margin-bottom: 22px;
+}
+
+.ilf-detail-card .field__label {
+  margin-bottom: 6px;
+  color: var(--fuji-red);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.ilf-detail-card .field__item,
+.ilf-detail-card p,
+.ilf-detail-card li {
+  color: var(--fuji-muted);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.ilf-detail-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.ilf-detail-card--profile {
+  display: grid;
+  grid-template-columns: minmax(220px, .45fr) 1fr;
+  gap: 28px;
+}
+
+.ilf-detail-card--profile img {
+  width: 100%;
+  aspect-ratio: .875;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.ilf-resource-detail,
+.ilf-video-detail,
+.ilf-news-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, .42fr);
+  gap: clamp(24px, 4vw, 44px);
+}
+
+.ilf-detail-card__main {
+  min-width: 0;
+}
+
+.ilf-detail-card__aside {
+  align-self: start;
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid var(--fuji-line);
+  border-radius: 8px;
+  background: var(--fuji-soft);
+}
+
+.ilf-detail-card__aside h2 {
+  margin: 0;
+  color: var(--fuji-red-black);
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+.ilf-detail-card__aside p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.ilf-detail-card__aside .field {
+  margin-bottom: 0;
+}
+
+.ilf-detail-card__aside .btn-main {
+  width: 100%;
+  white-space: normal;
+  text-align: center;
+}
+
+.ilf-dealer-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(260px, .9fr);
+  gap: clamp(22px, 4vw, 42px);
+}
+
+.ilf-dealer-detail__intro {
+  min-width: 0;
+}
+
+.ilf-dealer-detail__contact {
+  align-self: start;
+  padding: 24px;
+  border: 1px solid var(--fuji-line);
+  border-radius: 8px;
+  background: var(--fuji-soft);
+}
+
+.ilf-dealer-detail__contact .field:last-child,
+.ilf-dealer-detail__intro .field:last-child {
+  margin-bottom: 0;
+}
+
+.ilf-dealer-meta {
+  display: grid;
+  gap: 10px;
+  margin: 6px 0 18px;
+}
+
+.ilf-dealer-meta p {
+  margin: 0;
+}
+
+.ilf-dealer-meta strong,
+.ilf-dealer-meta span {
+  display: block;
+}
+
+.ilf-dealer-meta strong {
+  color: var(--fuji-red-dark);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.ilf-dealer-detail__actions {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 8px;
+}
+
+.ilf-dealer-region-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, .42fr);
+  gap: clamp(22px, 4vw, 42px);
+  align-items: start;
+}
+
+.ilf-dealer-region-main,
+.ilf-dealer-locator-card {
+  border: 1px solid var(--fuji-line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--fuji-shadow-soft);
+}
+
+.ilf-dealer-region-main {
+  padding: clamp(28px, 4vw, 48px);
+  border-top: 4px solid var(--fuji-red);
+}
+
+.ilf-dealer-region-copy {
+  max-width: 760px;
+}
+
+.ilf-dealer-region-copy p {
+  color: var(--fuji-muted);
+  font-size: 19px;
+  line-height: 1.65;
+}
+
+.ilf-dealer-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 30px 0;
+}
+
+.ilf-dealer-steps article {
+  padding: 20px;
+  border: 1px solid var(--fuji-line);
+  border-radius: 8px;
+  background: var(--fuji-soft);
+}
+
+.ilf-dealer-steps strong {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 14px;
+  border-radius: 4px;
+  background: var(--fuji-red);
+  color: #fff;
+  line-height: 1;
+}
+
+.ilf-dealer-steps h2 {
+  margin-bottom: 8px;
+  color: var(--fuji-red-black);
+  font-size: 20px;
+  line-height: 1.16;
+}
+
+.ilf-dealer-steps p {
+  margin: 0;
+  color: var(--fuji-muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.ilf-callout--compact {
+  margin-top: 0;
+}
+
+.ilf-callout--compact h2 {
+  font-size: clamp(26px, 3vw, 38px);
+}
+
+.ilf-dealer-locator-card {
+  position: sticky;
+  top: 104px;
+  display: grid;
+  gap: 16px;
+  padding: 28px;
+  border-top: 4px solid var(--fuji-red);
+}
+
+.ilf-dealer-locator-card h2 {
+  margin: 0;
+  color: var(--fuji-red-black);
+  font-size: 28px;
+  line-height: 1.12;
+}
+
+.ilf-dealer-locator-card > p:not(.fujitsu-eyebrow) {
+  margin: 0;
+  color: var(--fuji-muted);
+  line-height: 1.6;
+}
+
+.ilf-dealer-locator-card__actions {
+  display: grid;
+  gap: 10px;
+}
+
+.ilf-dealer-locator-card__actions .btn-main {
+  width: 100%;
+  white-space: normal;
+  text-align: center;
+}
+
+.ilf-brand-comparison__hero p {
+  max-width: 820px;
+  margin-top: 18px;
+  color: rgba(255, 255, 255, .82);
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.ilf-brand-comparison__content {
+  display: grid;
+  gap: 28px;
+}
+
+.ilf-brand-comparison .fujitsu-page-body .container {
+  max-width: 1180px;
+}
+
+.ilf-brand-comparison__chooser {
+  display: grid;
+  gap: clamp(22px, 3vw, 34px);
+  margin: 0 0 clamp(32px, 5vw, 58px);
+  padding: clamp(30px, 4.8vw, 56px);
+  border-top: 5px solid var(--fuji-red);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 92% 10%, rgba(255, 255, 255, .16), transparent 32%),
+    linear-gradient(135deg, var(--fuji-red-deep), var(--fuji-red-dark) 56%, var(--fuji-red));
+  box-shadow: 0 26px 80px rgba(63, 8, 15, .2);
+}
+
+.ilf-brand-comparison__chooser .fujitsu-eyebrow,
+.ilf-brand-comparison__chooser h2,
+.ilf-brand-comparison__chooser p {
+  color: #fff;
+}
+
+.ilf-brand-comparison__chooser h2 {
+  margin-bottom: 14px;
+  max-width: 920px;
+  font-size: clamp(34px, 4.8vw, 58px);
+  line-height: 1.05;
+}
+
+.ilf-brand-comparison__chooser p:last-child {
+  max-width: 980px;
+  margin: 0;
+  color: rgba(255, 255, 255, .84);
+  font-size: 19px;
+  line-height: 1.65;
+}
+
+.ilf-comparison-intro {
+  max-width: 900px;
+}
+
+.ilf-comparison-intro p {
+  color: var(--fuji-muted);
+  font-size: 21px;
+  line-height: 1.65;
+}
+
+.ilf-comparison-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.ilf-comparison-points article,
+.ilf-comparison-advantage,
+.ilf-comparison-hawaii,
+.ilf-comparison-verdict {
+  padding: clamp(24px, 4vw, 38px);
+  border: 1px solid var(--fuji-line);
+  border-top: 4px solid var(--fuji-red);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--fuji-shadow-soft);
+}
+
+.ilf-comparison-points h2,
+.ilf-comparison-advantage h2,
+.ilf-comparison-hawaii h2,
+.ilf-comparison-verdict h2 {
+  color: var(--fuji-red-black);
+  font-size: clamp(24px, 3vw, 38px);
+  line-height: 1.1;
+}
+
+.ilf-comparison-points p,
+.ilf-comparison-advantage li,
+.ilf-comparison-hawaii li,
+.ilf-comparison-verdict p {
+  color: var(--fuji-muted);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.ilf-comparison-advantage {
+  margin-bottom: 28px;
+  background:
+    linear-gradient(90deg, rgba(200, 16, 46, .08), rgba(255, 255, 255, .96)),
+    #fff;
+}
+
+.ilf-comparison-advantage ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ilf-comparison-advantage li {
+  position: relative;
+  padding: 18px 18px 18px 46px;
+  border: 1px solid rgba(200, 16, 46, .18);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, .78);
+}
+
+.ilf-comparison-advantage li::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 18px;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--fuji-red);
+  box-shadow: 0 0 0 5px rgba(200, 16, 46, .12);
+}
+
+.ilf-comparison-hawaii {
+  margin-bottom: 28px;
+  background: var(--fuji-soft);
+}
+
+.ilf-comparison-hawaii ul {
+  margin: 18px 0 0;
+  padding-left: 20px;
+}
+
+.ilf-comparison-hawaii li + li {
+  margin-top: 10px;
+}
+
+.ilf-comparison-verdict {
+  background: linear-gradient(135deg, var(--fuji-red-deep), var(--fuji-red-dark));
+}
+
+.ilf-comparison-verdict h2,
+.ilf-comparison-verdict p {
+  color: #fff;
+}
+
+.ilf-comparison-verdict .btn-outline {
+  background: #fff;
+  color: var(--fuji-red-dark);
+}
+
+.ilf-brand-comparison__nav {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+
+.ilf-brand-comparison__nav a {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 76px;
+  padding: 17px 18px;
+  border: 1px solid rgba(255, 255, 255, .32);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, .94);
+  color: var(--fuji-red-dark);
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.1;
+  text-align: center;
+  box-shadow: 0 16px 36px rgba(63, 8, 15, .16);
+}
+
+.ilf-brand-comparison__nav a::after {
+  content: "Compare";
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: var(--fuji-red);
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+
+.ilf-brand-comparison__nav a:hover {
+  transform: translateY(-2px);
+  border-color: #fff;
+  background: #fff;
+  color: var(--fuji-red);
+  box-shadow: 0 22px 48px rgba(63, 8, 15, .24);
+}
+
+.ilf-island-jump--centered {
+  justify-content: center;
+  margin: 30px 0 0;
+}
+
+.ilf-listing-hero p:last-child {
+  max-width: 760px;
+  margin-top: 18px;
+  color: rgba(255, 255, 255, .82);
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.ilf-listing {
+  padding: clamp(54px, 7vw, 90px) 0;
+  background: #fff;
+}
+
+.ilf-listing__grid,
+.ilf-listing__grid .view-content {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.ilf-listing__filters {
+  margin-bottom: 28px;
+  padding: 18px;
+  border: 1px solid var(--fuji-line);
+  border-radius: 8px;
+  background: var(--fuji-soft);
+}
+
+.ilf-listing__filters form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 14px;
+}
+
+.ilf-listing__filters .form-item {
+  margin: 0;
+}
+
+.ilf-listing__filters label,
+.contact-message-form label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--fuji-red-black);
+  font-weight: 900;
+}
+
+.ilf-listing__filters input[type="text"] {
+  min-width: min(100%, 310px);
+}
+
+.ilf-resource-tools {
+  display: grid;
+  grid-template-columns: minmax(220px, .4fr) 1fr;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 28px;
+  padding: 22px;
+  border: 1px solid var(--fuji-line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--fuji-shadow-soft);
+}
+
+.ilf-listing-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  margin: 0 0 30px;
+  padding: clamp(22px, 3vw, 34px);
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--fuji-red-deep), var(--fuji-red-dark));
+  color: #fff;
+  box-shadow: 0 22px 60px rgba(58, 9, 15, .14);
+}
+
+.ilf-listing-cta--comparison {
+  margin: 34px 0 0;
+}
+
+.ilf-listing-cta strong,
+.ilf-listing-cta span {
+  display: block;
+  color: #fff;
+}
+
+.ilf-listing-cta strong {
+  margin-bottom: 6px;
+  font-size: clamp(22px, 2.5vw, 32px);
+  line-height: 1.12;
+}
+
+.ilf-listing-cta span {
+  max-width: 760px;
+  color: rgba(255, 255, 255, .82);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.ilf-listing-cta p {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+}
+
+.ilf-listing-cta .btn-outline {
+  background: #fff;
+  color: var(--fuji-red-dark);
+}
+
+.ilf-resource-tools__copy strong,
+.ilf-resource-tools__copy span {
+  display: block;
+}
+
+.ilf-resource-tools__copy strong {
+  color: var(--fuji-red-black);
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.ilf-resource-tools__copy span {
+  color: var(--fuji-muted);
+  line-height: 1.45;
+}
+
+.ilf-resource-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.ilf-resource-chips a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid var(--fuji-line);
+  border-radius: 4px;
+  background: var(--fuji-soft);
+  color: var(--fuji-red-dark);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.ilf-resource-chips a:hover,
+.ilf-resource-chips a.is-active {
+  border-color: var(--fuji-red);
+  background: var(--fuji-red);
+  color: #fff;
+}
+
+.ilf-listing__item {
+  display: flex;
+}
+
+.ilf-island-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.ilf-island-jump a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid var(--fuji-line);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--fuji-red-dark);
+  font-weight: 900;
+  box-shadow: var(--fuji-shadow-soft);
+}
+
+.ilf-island-jump a:hover {
+  border-color: var(--fuji-red);
+  background: var(--fuji-red);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.ilf-teaser-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--fuji-line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--fuji-shadow-soft);
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+.ilf-teaser-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.ilf-teaser-card img {
+  width: 100%;
+  aspect-ratio: 1.45;
+  object-fit: cover;
+}
+
+.ilf-teaser-card--profile img {
+  aspect-ratio: .875;
+  object-position: center top;
+}
+
+.ilf-teaser-card__type {
+  margin-bottom: 12px;
+  color: var(--fuji-red);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.ilf-teaser-card h2 {
+  margin-bottom: 12px;
+  color: var(--fuji-red-black);
+  font-size: 25px;
+  line-height: 1.18;
+}
+
+.ilf-teaser-card h2 a {
+  color: inherit;
+}
+
+.ilf-teaser-card h2 a:hover {
+  color: var(--fuji-red);
+}
+
+.ilf-teaser-card .field,
+.ilf-teaser-card p,
+.ilf-teaser-card li {
+  color: var(--fuji-muted);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.ilf-teaser-card .field + .field {
+  margin-top: 8px;
+}
+
+.ilf-teaser-card .field__label {
+  color: var(--fuji-red-dark);
+  font-weight: 900;
+}
+
+.ilf-teaser-card__action {
+  align-self: flex-start;
+  margin-top: 12px;
+  white-space: normal;
+  text-align: center;
+}
+
+.ilf-teaser-card__link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 18px;
+  color: var(--fuji-red);
+  font-weight: 900;
+}
+
+.ilf-teaser-card__link::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  margin-left: 8px;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.ilf-resource-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 0 0 14px;
+  color: var(--fuji-muted);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.ilf-resource-meta--large {
+  margin-bottom: 0;
+  padding: 12px;
+  border: 1px solid rgba(200, 16, 46, .18);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.ilf-resource-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  min-height: 28px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: var(--fuji-red);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.fujitsu-site input,
+.fujitsu-site select,
+.fujitsu-site textarea {
+  min-height: 46px;
+  border: 1px solid var(--fuji-line);
+  border-radius: 4px;
+  color: var(--fuji-ink);
+  background: #fff;
+}
+
+.fujitsu-site input:focus,
+.fujitsu-site select:focus,
+.fujitsu-site textarea:focus {
+  border-color: var(--fuji-red);
+  box-shadow: 0 0 0 3px rgba(200, 16, 46, .14);
+  outline: none;
+}
+
+.fujitsu-site .form-submit,
+.fujitsu-site button {
+  border-color: var(--fuji-red);
+  background: var(--fuji-red);
+  color: #fff;
+  font-weight: 800;
+  transition: background .18s ease, border-color .18s ease, transform .18s ease;
+}
+
+.fujitsu-site .form-submit:hover,
+.fujitsu-site button:hover {
+  border-color: var(--fuji-red-dark);
+  background: var(--fuji-red-dark);
+  transform: translateY(-1px);
+}
+
+.contact-message-form {
+  max-width: 760px;
+  margin: var(--fuji-section-y) auto;
+  padding: clamp(24px, 4vw, 42px);
+  border: 1px solid var(--fuji-line);
+  border-top: 4px solid var(--fuji-red);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--fuji-shadow-soft);
+}
+
+.contact-message-form .form-item {
+  margin-bottom: 18px;
+}
+
+.contact-message-form input,
+.contact-message-form textarea,
+.contact-message-form select {
+  width: 100%;
+}
+
+.ilf-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .45s ease, transform .45s ease;
+}
+
+.ilf-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ilf-listing__empty {
+  padding: 30px;
+  border: 1px dashed var(--fuji-line);
+  border-radius: 8px;
+  background: var(--fuji-soft);
+  color: var(--fuji-muted);
+  text-align: center;
+}
+
+.ilf-listing__pager {
+  margin-top: 34px;
+  text-align: center;
+}
+
+.ilf-listing__pager .pager__items,
+.ilf-listing__pager .js-pager__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.ilf-listing__pager .pager__items li,
+.ilf-listing__pager .js-pager__items li,
+.ilf-listing__pager .pager__item a,
+.ilf-listing__pager .pager__item.is-active a,
+.ilf-listing__pager .js-pager__items a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  min-height: 42px;
+  padding: 8px 12px;
+  border: 1px solid var(--fuji-line);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--fuji-red-dark);
+  font-weight: 900;
+  line-height: 1;
+  box-shadow: var(--fuji-shadow-soft);
+  list-style: none;
+}
+
+.ilf-listing__pager .js-pager__items a {
+  color: var(--fuji-red);
+}
+
+.ilf-listing__pager .pager__item.is-active a,
+.ilf-listing__pager .pager__item a:hover,
+.ilf-listing__pager .js-pager__items a:hover {
+  border-color: var(--fuji-red);
+  background: var(--fuji-red);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.ilf-sticky-cta {
+  position: fixed;
+  right: clamp(16px, 3vw, 34px);
+  bottom: clamp(14px, 2vw, 26px);
+  z-index: 60;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  max-width: min(520px, calc(100vw - 32px));
+  padding: 12px 14px 12px 18px;
+  border: 1px solid rgba(255, 255, 255, .22);
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--fuji-red-dark), var(--fuji-red));
+  color: #fff;
+  box-shadow: 0 20px 50px rgba(88, 0, 14, .28);
+}
+
+.ilf-sticky-cta span {
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.ilf-sticky-cta .btn-main {
+  flex: 0 0 auto;
+  border-color: #fff;
+  background: #fff;
+  color: var(--fuji-red-dark);
+  box-shadow: none;
+}
+
+.ilf-sticky-cta .btn-main:hover {
+  border-color: var(--fuji-soft);
+  background: var(--fuji-soft);
+  color: var(--fuji-red-dark);
+}
+
+.ilf-testimonials {
+  padding: clamp(52px, 7vw, 92px) 0;
+  background: linear-gradient(180deg, #fff, var(--fuji-soft));
+}
+
+.ilf-testimonials--embedded {
+  margin: clamp(38px, 5vw, 64px) 0;
+  padding: clamp(28px, 4vw, 44px);
+  border: 1px solid var(--fuji-line);
+  border-top: 4px solid var(--fuji-red);
+  border-radius: 8px;
+  background: var(--fuji-soft);
+}
+
+.ilf-testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.ilf-testimonials__grid article {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 100%;
+  padding: clamp(22px, 3vw, 30px);
+  border: 1px solid var(--fuji-line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--fuji-shadow-soft);
+}
+
+.ilf-testimonials__grid p {
+  margin: 0;
+  color: var(--fuji-charcoal);
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.ilf-testimonials__grid strong {
+  margin-top: auto;
+  color: var(--fuji-red-dark);
+}
+
+.ilf-testimonials__grid span {
+  color: var(--fuji-muted);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.ilf-comparison-choice {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: clamp(28px, 4vw, 48px) 0;
+}
+
+.ilf-comparison-choice article,
+.ilf-comparison-faq details {
+  border: 1px solid var(--fuji-line);
+  border-top: 4px solid var(--fuji-red);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--fuji-shadow-soft);
+}
+
+.ilf-comparison-choice article {
+  padding: clamp(24px, 3vw, 34px);
+}
+
+.ilf-comparison-choice h2,
+.ilf-comparison-choice h3,
+.ilf-comparison-faq h2 {
+  margin-top: 0;
+}
+
+.ilf-comparison-faq {
+  display: grid;
+  gap: 14px;
+  margin: clamp(32px, 4vw, 52px) 0;
+}
+
+.ilf-comparison-faq details {
+  padding: 0;
+}
+
+.ilf-comparison-faq summary {
+  cursor: pointer;
+  padding: 20px 24px;
+  color: var(--fuji-red-dark);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.ilf-comparison-faq details p {
+  margin: 0;
+  padding: 0 24px 22px;
+}
+
+@media (max-width: 991px) {
+  .fujitsu-header__inner,
+  .fujitsu-nav,
+  .fujitsu-menu {
+    align-items: flex-start;
+  }
+
+  .fujitsu-header__inner {
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px 0;
+  }
+
+  .fujitsu-nav {
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  .fujitsu-menu__link {
+    min-height: 38px;
+    padding: 0 8px;
+    font-size: 15px;
+  }
+
+  .fujitsu-site .fujitsu-header__cta {
+    width: 100%;
+  }
+
+  .fujitsu-header__actions {
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .fujitsu-social--header {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .fujitsu-social--header a {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .fujitsu-hero h1,
+  .fujitsu-page-hero h1 {
+    line-height: 1.04;
+  }
+
+  .fujitsu-flow-grid,
+  .fujitsu-flow-grid--locations,
+  .fujitsu-why__grid,
+  .fujitsu-resource-grid,
+  .fujitsu-face-strip,
+  .fujitsu-managed-grid,
+  .fujitsu-managed-grid--slides,
+  .ilf-listing__grid .view-content,
+  .ilf-resource-tools,
+  .ilf-card-grid--three,
+  .ilf-card-grid--four,
+  .ilf-card-grid--five,
+  .ilf-island-grid,
+  .ilf-resource-list,
+  .ilf-comparison__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ilf-listing-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .fujitsu-hero__image img {
+    aspect-ratio: 1.25;
+  }
+
+  .fujitsu-footer__bottom {
+    flex-direction: column;
+  }
+
+  .fujitsu-cta-strip__inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .fujitsu-why__compare {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .fujitsu-why__compare .fujitsu-actions {
+    width: 100%;
+  }
+
+  .ilf-detail-card--profile {
+    grid-template-columns: 1fr;
+  }
+
+  .ilf-resource-detail,
+  .ilf-video-detail,
+  .ilf-news-detail,
+  .ilf-dealer-detail,
+  .ilf-dealer-region-layout,
+  .ilf-dealer-steps,
+  .ilf-brand-comparison__chooser,
+  .ilf-comparison-advantage ul,
+  .ilf-comparison-points,
+  .ilf-comparison-choice,
+  .ilf-testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ilf-brand-comparison__nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ilf-dealer-locator-card {
+    position: static;
+  }
+
+  .ilf-sticky-cta {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 575px) {
+  .fujitsu-actions,
+  .fujitsu-trust-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .ilf-brand-comparison__nav {
+    grid-template-columns: 1fr;
+  }
+
+  .ilf-brand-comparison__nav a {
+    min-height: 56px;
+  }
+
+  .ilf-sticky-cta {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .fujitsu-site .btn-main,
+  .fujitsu-trust-row span,
+  .ilf-dealer-detail__actions .btn-main,
+  .ilf-island-jump a {
+    width: 100%;
+  }
+
+  .ilf-teaser-card__body,
+  .fujitsu-proof-card,
+  .ilf-card-grid article,
+  .ilf-island-grid a,
+  .ilf-resource-list a {
+    padding: 22px;
+  }
+}

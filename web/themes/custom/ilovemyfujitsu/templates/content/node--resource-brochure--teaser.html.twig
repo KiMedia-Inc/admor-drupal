@@ -1,0 +1,22 @@
+<article{{ attributes.addClass('ilf-teaser-card', 'ilf-teaser-card--resource') }}>
+  <div class="ilf-teaser-card__body">
+    <p class="ilf-teaser-card__type">{{ resource_category ?: 'Fujitsu resource' }}</p>
+    <h2><a href="{{ url }}">{{ label }}</a></h2>
+    <div class="ilf-resource-meta">
+      <span class="ilf-resource-icon" aria-hidden="true">PDF</span>
+      {% if resource_file_size %}
+        <span>{{ resource_file_size }}</span>
+      {% else %}
+        <span>Online resource</span>
+      {% endif %}
+    </div>
+    {{ content.body }}
+    {% if resource_file_url %}
+      <a class="btn-main ilf-teaser-card__action" href="{{ resource_file_url }}">Download PDF</a>
+    {% elseif node.field_resource_link.uri %}
+      {% set resource_href = node.field_resource_link.uri starts with 'internal:' ? node.field_resource_link.uri|replace({'internal:': ''}) : node.field_resource_link.uri %}
+      <a class="btn-main ilf-teaser-card__action" href="{{ resource_href }}">{{ node.field_resource_link.title ?: 'Open resource file' }}</a>
+    {% endif %}
+    <a class="ilf-teaser-card__link" href="{{ url }}">Open resource</a>
+  </div>
+</article>

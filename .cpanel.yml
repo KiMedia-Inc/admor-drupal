@@ -1,5 +1,6 @@
 deployment:
   tasks:
     - /usr/local/bin/php -v
-    - composer install --no-dev
+    - composer install --no-dev --optimize-autoloader
+    - vendor/bin/drush updb -y -r web
     - vendor/bin/drush cr -r web

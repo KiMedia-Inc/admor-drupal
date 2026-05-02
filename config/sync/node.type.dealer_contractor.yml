@@ -1,0 +1,11 @@
+uuid: 94c7f95c-c528-4f91-9ed1-b512961f267f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Dealer / Contractor'
+type: dealer_contractor
+description: 'Certified Fujitsu dealer or contractor listings grouped by island.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

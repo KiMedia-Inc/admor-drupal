@@ -1,0 +1,21 @@
+uuid: 8391bc7c-25f2-42c6-a580-f1604ccd508d
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.admor_hvac
+    - field.storage.contact_message.field_island
+  module:
+    - options
+id: contact_message.admor_hvac.field_island
+field_name: field_island
+entity_type: contact_message
+bundle: admor_hvac
+label: Island
+description: 'Choose the island this message is about.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

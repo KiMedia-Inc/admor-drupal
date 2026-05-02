@@ -1,0 +1,27 @@
+uuid: 9ce0dcea-abc5-4f63-93c2-5b50e50a921f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_file
+    - node.type.resource_brochure
+  module:
+    - file
+id: node.resource_brochure.field_resource_file
+field_name: field_resource_file
+entity_type: node
+bundle: resource_brochure
+label: 'PDF / file'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'pdf doc docx xls xlsx'
+  max_filesize: ''
+  description_field: false
+field_type: file

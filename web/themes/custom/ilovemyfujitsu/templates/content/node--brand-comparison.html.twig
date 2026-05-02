@@ -1,0 +1,64 @@
+<article{{ attributes.addClass('ilf-structured-node', 'ilf-brand-comparison') }}>
+  <header class="fujitsu-page-hero ilf-brand-comparison__hero">
+    <div class="container">
+      <p class="fujitsu-eyebrow">Fujitsu brand comparison</p>
+      <h1>{{ label }}</h1>
+      {% if node.field_comparison_summary.value %}
+        <p>{{ node.field_comparison_summary.value }}</p>
+      {% endif %}
+      <div class="fujitsu-actions">
+        <a class="btn-main" href="/find-a-fujitsu-contractor">Find a Fujitsu Dealer</a>
+        <a class="btn-main btn-outline" href="/products">Explore Fujitsu Products</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="fujitsu-page-body">
+    <div class="container">
+      <section class="ilf-brand-comparison__chooser" aria-labelledby="comparison-brand-chooser">
+        <div>
+          <p class="fujitsu-eyebrow">Compare before you choose</p>
+          <h2 id="comparison-brand-chooser">Which mini-split brand are you considering?</h2>
+          <p>Select the brand your contractor quoted or the brand you are researching, then see why Fujitsu is often the stronger choice for Hawaii homes, coastal conditions, warranty confidence, and local support.</p>
+        </div>
+        <nav class="ilf-brand-comparison__nav" aria-label="Fujitsu brand comparisons">
+          <a href="/fujitsu-vs-mitsubishi">Mitsubishi</a>
+          <a href="/fujitsu-vs-daikin">Daikin</a>
+          <a href="/fujitsu-vs-lg">LG</a>
+          <a href="/fujitsu-vs-gree">Gree</a>
+          <a href="/fujitsu-vs-panasonic">Panasonic</a>
+        </nav>
+      </section>
+      <div class="ilf-brand-comparison__content">
+        {{ content.body }}
+      </div>
+      {% if ilf_testimonials %}
+        <section class="ilf-testimonials ilf-testimonials--embedded">
+          <div class="fujitsu-section-heading">
+            <p class="fujitsu-eyebrow">Customer proof</p>
+            <h2>What Hawaii buyers are saying about Fujitsu.</h2>
+          </div>
+          <div class="ilf-testimonials__grid">
+            {% for item in ilf_testimonials %}
+              <article>
+                <p>“{{ item.quote ?: item.summary }}”</p>
+                <strong>{{ item.title }}</strong>
+                {% if item.island or item.system %}<span>{{ item.island }}{% if item.island and item.system %} / {% endif %}{{ item.system }}</span>{% endif %}
+              </article>
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
+      <section class="ilf-listing-cta ilf-listing-cta--comparison">
+        <div>
+          <strong>Ready to turn the comparison into a quote?</strong>
+          <span>Bring this page to your AC contractor and ask them to quote Fujitsu specifically for your home, business, island, and long-term service needs.</span>
+        </div>
+        <p>
+          <a class="btn-main" href="/find-a-fujitsu-contractor">Find a Fujitsu Dealer</a>
+          <a class="btn-main btn-outline" href="/products">Explore Fujitsu Products</a>
+        </p>
+      </section>
+    </div>
+  </div>
+</article>

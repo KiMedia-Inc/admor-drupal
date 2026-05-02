@@ -1,0 +1,23 @@
+uuid: af74ed2b-386b-454c-a061-c5fdf5da4c6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sort_order
+    - node.type.resource_brochure
+id: node.resource_brochure.field_sort_order
+field_name: field_sort_order
+entity_type: node
+bundle: resource_brochure
+label: 'Sort order'
+description: 'Lower numbers appear first.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

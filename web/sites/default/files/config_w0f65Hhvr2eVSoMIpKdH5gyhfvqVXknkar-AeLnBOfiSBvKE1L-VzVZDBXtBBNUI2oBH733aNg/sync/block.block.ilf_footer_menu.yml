@@ -1,0 +1,25 @@
+uuid: fb054742-5e14-4a8c-a2db-f1de283c5f21
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - ilovemyfujitsu
+id: ilf_footer_menu
+theme: ilovemyfujitsu
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Footer navigation'
+  label_display: ''
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

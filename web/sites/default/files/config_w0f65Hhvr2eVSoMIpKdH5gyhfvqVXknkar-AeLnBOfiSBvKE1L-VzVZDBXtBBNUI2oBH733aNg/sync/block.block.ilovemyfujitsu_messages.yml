@@ -1,0 +1,22 @@
+uuid: cc52151b-a825-467f-b869-5dd7a188e74e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ilovemyfujitsu
+_core:
+  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
+id: ilovemyfujitsu_messages
+theme: ilovemyfujitsu
+region: highlighted
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

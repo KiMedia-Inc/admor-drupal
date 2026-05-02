@@ -1,0 +1,33 @@
+<article{{ attributes.addClass('ilf-structured-node', 'ilf-structured-node--video') }}>
+  <header class="fujitsu-page-hero">
+    <div class="container">
+      <p class="fujitsu-eyebrow">Fujitsu Video</p>
+      <h1>{{ label }}</h1>
+    </div>
+  </header>
+
+  <div class="fujitsu-page-body">
+    <div class="container">
+      <div class="ilf-detail-card ilf-video-detail">
+        <div class="ilf-detail-card__main">
+          {% if node.field_thumbnail.target_id and node.field_thumbnail.entity %}
+            <img
+              class="ilf-detail-card__hero-image"
+              src="{{ file_url(node.field_thumbnail.entity.uri.value) }}"
+              alt="{{ node.field_thumbnail.alt ?: (label|render|striptags ~ ' commercial thumbnail') }}"
+            >
+          {% endif %}
+          {{ content.body }}
+        </div>
+        <aside class="ilf-detail-card__aside" aria-label="Video actions">
+          <h2>Remember the brand</h2>
+          <p>Use Fujitsu commercials and videos to make the next contractor conversation simple: ask for Fujitsu by name.</p>
+          {% if node.field_video_url.uri %}
+            <a class="btn-main" href="{{ node.field_video_url.uri }}">{{ node.field_video_url.title ?: 'Watch video' }}</a>
+          {% endif %}
+          <a class="btn-main btn-outline" href="/find-a-fujitsu-contractor">Find a Fujitsu Dealer</a>
+        </aside>
+      </div>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,21 @@
+uuid: bcf0b49b-2cb9-4dbe-b2c7-e8e9924ed7ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_island
+    - node.type.customer_testimonial
+  module:
+    - options
+id: node.customer_testimonial.field_island
+field_name: field_island
+entity_type: node
+bundle: customer_testimonial
+label: Island
+description: 'Example: Oahu, Maui, Kauai, Big Island.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,19 @@
+uuid: 5071e4e2-68bc-4c59-b593-9a584f878a07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_system_installed
+    - node.type.customer_testimonial
+id: node.customer_testimonial.field_system_installed
+field_name: field_system_installed
+entity_type: node
+bundle: customer_testimonial
+label: 'System installed'
+description: 'Optional Fujitsu system, model family, or installation type.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

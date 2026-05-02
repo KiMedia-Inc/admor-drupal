@@ -1,0 +1,19 @@
+uuid: d252c265-ebe2-45e9-a090-3941b27f6ec8
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.athletics_application
+    - field.storage.contact_message.field_phone
+id: contact_message.athletics_application.field_phone
+field_name: field_phone
+entity_type: contact_message
+bundle: athletics_application
+label: Phone
+description: 'Best contact phone number.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

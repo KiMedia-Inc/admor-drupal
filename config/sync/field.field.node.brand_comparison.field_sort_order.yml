@@ -1,0 +1,23 @@
+uuid: 1e56eb85-dd46-4165-ae75-9897b3b347dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sort_order
+    - node.type.brand_comparison
+id: node.brand_comparison.field_sort_order
+field_name: field_sort_order
+entity_type: node
+bundle: brand_comparison
+label: 'Sort order'
+description: 'Lower numbers appear first.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

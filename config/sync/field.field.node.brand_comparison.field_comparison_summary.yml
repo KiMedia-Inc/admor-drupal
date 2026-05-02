@@ -1,0 +1,22 @@
+uuid: 1c623fdf-b2de-4f6f-b7d1-3b2b4a395cb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_comparison_summary
+    - node.type.brand_comparison
+  module:
+    - text
+id: node.brand_comparison.field_comparison_summary
+field_name: field_comparison_summary
+entity_type: node
+bundle: brand_comparison
+label: 'SEO summary'
+description: 'Short summary used by editors for SEO positioning.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

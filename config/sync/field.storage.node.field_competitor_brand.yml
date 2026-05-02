@@ -1,0 +1,20 @@
+uuid: ed3fcc69-4f5d-4066-a05f-b1fdaa2a7d9d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_competitor_brand
+field_name: field_competitor_brand
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

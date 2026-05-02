@@ -1,0 +1,22 @@
+uuid: 47ffa517-bb56-4ae5-9cc7-f465a7688466
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: ilf_dealers
+label: 'Fujitsu dealers'
+type: 'canonical_entities:node'
+pattern: '/find-a-dealer/[node:title]'
+selection_criteria:
+  769368a5-1875-4f8c-afa1-f045f45bd86e:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 769368a5-1875-4f8c-afa1-f045f45bd86e
+    context_mapping:
+      node: node
+    bundles:
+      dealer_contractor: dealer_contractor
+selection_logic: and
+weight: -6
+relationships: {  }

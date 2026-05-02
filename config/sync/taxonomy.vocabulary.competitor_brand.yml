@@ -1,0 +1,9 @@
+uuid: 199b5672-e5f8-4306-bfae-369356708955
+langcode: en
+status: true
+dependencies: {  }
+name: 'Competitor Brand'
+vid: competitor_brand
+description: null
+weight: 0
+new_revision: false

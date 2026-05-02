@@ -1,0 +1,16 @@
+uuid: c98a0dc0-496c-4236-bc0f-de3b1c8c8f28
+langcode: en
+status: true
+dependencies: {  }
+id: node__resource_brochure
+label: 'Resource / Brochure'
+tags:
+  title: '[node:title] | Fujitsu Hawaii Resources'
+  description: 'Review [node:title] from I Love My Fujitsu, then ask a Hawaii contractor to quote Fujitsu by name.'
+  canonical_url: '[node:url]'
+  robots: 'index, follow'
+  og_site_name: 'I Love My Fujitsu'
+  og_title: '[node:title] | Fujitsu Hawaii Resources'
+  og_description: 'Review Fujitsu brochures, PDFs, rebates, and technical resources before choosing an AC system in Hawaii.'
+  og_type: article
+  og_image: 'https://ilovemyfujitsu.com/themes/custom/ilovemyfujitsu/assets/images/fujitsu-logo.png'

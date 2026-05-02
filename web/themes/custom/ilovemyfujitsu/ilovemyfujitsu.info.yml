@@ -1,0 +1,14 @@
+name: 'I Love My Fujitsu'
+type: theme
+description: 'Custom Fujitsu Hawaii demand-generation theme based on the CoolAir visual system.'
+package: Custom
+core_version_requirement: ^11
+base theme: false
+libraries:
+  - ilovemyfujitsu/global
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  highlighted: Highlighted
+  content: Content
+  footer: Footer

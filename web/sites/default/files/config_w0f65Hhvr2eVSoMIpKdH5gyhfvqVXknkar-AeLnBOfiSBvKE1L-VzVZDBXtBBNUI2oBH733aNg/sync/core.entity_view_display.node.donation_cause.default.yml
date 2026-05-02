@@ -1,0 +1,55 @@
+uuid: 6d0b0728-dd1c-4735-a613-45a92e6089ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.donation_cause.body
+    - field.field.node.donation_cause.field_donation_url
+    - field.field.node.donation_cause.field_logo_image
+    - field.field.node.donation_cause.field_sort_order
+    - node.type.donation_cause
+  module:
+    - user
+id: node.donation_cause.default
+targetEntityType: node
+bundle: donation_cause
+mode: default
+content:
+  body:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_donation_url:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_logo_image:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_sort_order:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,42 @@
+uuid: 988180c4-a05b-41e1-9b28-26ecba8eaa9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.face_profile.body
+    - field.field.node.face_profile.field_featured
+    - field.field.node.face_profile.field_profile_image
+    - field.field.node.face_profile.field_related_video_url
+    - field.field.node.face_profile.field_role
+    - field.field.node.face_profile.field_sort_order
+    - field.field.node.face_profile.field_summary
+    - node.type.face_profile
+  module:
+    - text
+    - user
+id: node.face_profile.teaser
+targetEntityType: node
+bundle: face_profile
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_featured: true
+  field_profile_image: true
+  field_related_video_url: true
+  field_role: true
+  field_sort_order: true
+  field_summary: true

@@ -1,0 +1,24 @@
+uuid: e5a003d8-1400-4f1b-a021-ffaad6962bdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category
+    - node.type.news_update
+    - taxonomy.vocabulary.news_category
+id: node.news_update.field_category
+field_name: field_category
+entity_type: node
+bundle: news_update
+label: Category
+description: 'Editorial category.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      news_category: news_category
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: eb1fd16d-7fc6-47f3-bcb4-53158a1aaf96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_year
+    - node.type.resource_brochure
+id: node.resource_brochure.field_year
+field_name: field_year
+entity_type: node
+bundle: resource_brochure
+label: Year
+description: 'Publication or catalog year.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

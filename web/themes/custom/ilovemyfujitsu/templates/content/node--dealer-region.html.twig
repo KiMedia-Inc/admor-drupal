@@ -1,0 +1,90 @@
+<article{{ attributes.addClass('ilf-structured-node', 'ilf-structured-node--dealer-region') }}>
+  <header class="fujitsu-page-hero">
+    <div class="container">
+      <p class="fujitsu-eyebrow">Find a Fujitsu dealer</p>
+      <h1>{{ label }}</h1>
+      <p>Choose Fujitsu before the estimate is written. Use this island locator pathway to connect with contractor support near you.</p>
+    </div>
+  </header>
+
+  <div class="fujitsu-page-body">
+    <div class="container">
+      <div class="ilf-dealer-region-layout">
+        <section class="ilf-dealer-region-main">
+          <p class="ilf-kicker">{{ node.field_island_region.entity ? node.field_island_region.entity.label : 'Hawaii' }} contractor pathway</p>
+          <div class="ilf-dealer-region-copy">
+            {{ node.body.value|raw }}
+          </div>
+
+          <div class="ilf-dealer-steps" aria-label="How to use this page">
+            <article>
+              <strong>1</strong>
+              <h2>Request Fujitsu by name</h2>
+              <p>Tell your contractor you want Fujitsu included in the quote so efficiency, warranty, and local support are part of the decision.</p>
+            </article>
+            <article>
+              <strong>2</strong>
+              <h2>Confirm the right system</h2>
+              <p>Review brochures and match the system to your home, business, room count, humidity needs, and daily usage.</p>
+            </article>
+            <article>
+              <strong>3</strong>
+              <h2>Install with confidence</h2>
+              <p>Fujitsu contractors can connect with Hawaii-based product support, parts access, and warranty guidance through Admor.</p>
+            </article>
+          </div>
+
+          <section class="ilf-callout ilf-callout--compact">
+            <h2>Why choose a Fujitsu contractor?</h2>
+            <p>Fujitsu-trained contractors understand system matching, installation quality, warranty requirements, and local support channels. That means a smoother path from estimate to long-term comfort.</p>
+          </section>
+        </section>
+
+        <aside class="ilf-dealer-locator-card" aria-label="Contractor locator actions">
+          <p class="fujitsu-eyebrow">Official locator</p>
+          <h2>{{ node.field_island_region.entity ? node.field_island_region.entity.label : label }} Fujitsu support</h2>
+          <p>Open the contractor locator, then ask each installer to quote Fujitsu as the preferred AC system.</p>
+          <div class="ilf-dealer-meta">
+            {% if node.field_island_region.entity %}
+              <p><strong>Island</strong><span>{{ node.field_island_region.entity.label }}</span></p>
+            {% endif %}
+            <p><strong>Best next step</strong><span>Find a contractor, compare Fujitsu products, then request Fujitsu by name.</span></p>
+          </div>
+          <div class="ilf-dealer-locator-card__actions">
+            {% if node.field_dealer_locator_url.uri %}
+              <a class="btn-main" href="{{ node.field_dealer_locator_url.uri }}" data-ilf-contractor-link>{{ node.field_cta_text.value ?: 'Open contractor locator' }}</a>
+            {% endif %}
+            <a class="btn-main btn-outline" href="/products">Explore Fujitsu Products</a>
+            <a class="btn-main btn-outline" href="/fujitsu-vs-mitsubishi">Compare Fujitsu brands</a>
+            <a class="ilf-teaser-card__link" href="/find-a-fujitsu-contractor">View all islands</a>
+          </div>
+        </aside>
+      </div>
+
+      {% if ilf_testimonials %}
+        <section class="ilf-testimonials ilf-testimonials--embedded">
+          <div class="fujitsu-section-heading">
+            <p class="fujitsu-eyebrow">Local proof</p>
+            <h2>Fujitsu comfort stories from Hawaii customers.</h2>
+          </div>
+          <div class="ilf-testimonials__grid">
+            {% for item in ilf_testimonials %}
+              <article>
+                <p>“{{ item.quote ?: item.summary }}”</p>
+                <strong>{{ item.title }}</strong>
+                {% if item.island or item.system %}<span>{{ item.island }}{% if item.island and item.system %} / {% endif %}{{ item.system }}</span>{% endif %}
+              </article>
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
+
+      <nav class="ilf-island-jump ilf-island-jump--centered" aria-label="Dealer island navigation">
+        <a href="/find-a-dealer/oahu-dealers">Oahu</a>
+        <a href="/find-a-dealer/maui-dealers">Maui</a>
+        <a href="/find-a-dealer/kauai-dealers">Kauai</a>
+        <a href="/find-a-dealer/big-island-dealers">Big Island</a>
+      </nav>
+    </div>
+  </div>
+</article>

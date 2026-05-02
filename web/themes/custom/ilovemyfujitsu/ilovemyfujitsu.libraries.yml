@@ -1,0 +1,10 @@
+global:
+  css:
+    theme:
+      vendor/coolair/css/bootstrap.min.css: {}
+      assets/css/fujitsu.css: {}
+  js:
+    assets/js/fujitsu.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

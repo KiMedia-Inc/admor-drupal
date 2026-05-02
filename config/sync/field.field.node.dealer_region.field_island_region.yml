@@ -1,0 +1,24 @@
+uuid: 243a945e-4dff-4b9d-8c24-a772191c4879
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_island_region
+    - node.type.dealer_region
+    - taxonomy.vocabulary.island_region
+id: node.dealer_region.field_island_region
+field_name: field_island_region
+entity_type: node
+bundle: dealer_region
+label: Island
+description: 'Choose the island this dealer locator region belongs to.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      island_region: island_region
+field_type: entity_reference

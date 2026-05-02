@@ -1,0 +1,25 @@
+<article{{ attributes.addClass('ilf-teaser-card', 'ilf-teaser-card--branch') }}>
+  {% if node.field_image.target_id and node.field_image.entity %}
+    <img
+      src="{{ file_url(node.field_image.entity.uri.value) }}"
+      alt="{{ node.field_image.alt ?: (label|render|striptags ~ ' branch location') }}"
+      loading="lazy"
+    >
+  {% endif %}
+  <div class="ilf-teaser-card__body">
+    <p class="ilf-teaser-card__type">Hawaii support location</p>
+    <h2><a href="{{ url }}">{{ label }}</a></h2>
+    <div class="ilf-dealer-meta">
+      {% if node.field_island_region.entity %}
+        <p><strong>Island</strong><span>{{ node.field_island_region.entity.label }}</span></p>
+      {% endif %}
+      {% if node.field_address.value %}
+        <p><strong>Address</strong><span>{{ node.field_address.value|striptags }}</span></p>
+      {% endif %}
+      {% if node.field_phone.value %}
+        <p><strong>Phone</strong><span>{{ node.field_phone.value }}</span></p>
+      {% endif %}
+    </div>
+    <a class="ilf-teaser-card__link" href="{{ url }}">View branch</a>
+  </div>
+</article>

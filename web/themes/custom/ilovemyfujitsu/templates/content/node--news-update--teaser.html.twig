@@ -1,0 +1,19 @@
+<article{{ attributes.addClass('ilf-teaser-card', 'ilf-teaser-card--news') }}>
+  {% if node.field_featured_image.target_id and node.field_featured_image.entity %}
+    <img
+      src="{{ file_url(node.field_featured_image.entity.uri.value) }}"
+      alt="{{ node.field_featured_image.alt ?: (label|render|striptags ~ ' image') }}"
+      loading="lazy"
+    >
+  {% endif %}
+  <div class="ilf-teaser-card__body">
+    <p class="ilf-teaser-card__type">Update</p>
+    <h2><a href="{{ url }}">{{ label }}</a></h2>
+    {% if node.field_summary.value %}
+      <p>{{ node.field_summary.value|striptags }}</p>
+    {% else %}
+      {{ content.body }}
+    {% endif %}
+    <a class="ilf-teaser-card__link" href="{{ url }}">Read update</a>
+  </div>
+</article>

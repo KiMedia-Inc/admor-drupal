@@ -1,0 +1,22 @@
+uuid: 57e91a5a-d79b-40e7-9fed-1fa1e32aa8b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: ilf_faces
+label: 'Faces of Fujitsu'
+type: 'canonical_entities:node'
+pattern: '/friends-family/[node:title]'
+selection_criteria:
+  7261894e-c55c-46c0-9453-89759ac1c52b:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 7261894e-c55c-46c0-9453-89759ac1c52b
+    context_mapping:
+      node: node
+    bundles:
+      face_profile: face_profile
+selection_logic: and
+weight: -7
+relationships: {  }

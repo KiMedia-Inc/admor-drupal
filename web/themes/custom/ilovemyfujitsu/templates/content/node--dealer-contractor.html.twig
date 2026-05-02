@@ -1,0 +1,48 @@
+<article{{ attributes.addClass('ilf-structured-node', 'ilf-structured-node--dealer') }}>
+  <header class="fujitsu-page-hero">
+    <div class="container">
+      <p class="fujitsu-eyebrow">Certified Fujitsu Support</p>
+      <h1>{{ label }}</h1>
+    </div>
+  </header>
+
+  <div class="fujitsu-page-body">
+    <div class="container">
+      <div class="ilf-detail-card ilf-dealer-detail">
+        <div class="ilf-dealer-detail__intro">
+          {{ content.body }}
+        </div>
+        <div class="ilf-dealer-detail__contact">
+          {% if node.field_island.value %}
+            <div class="field">
+              <div class="field__label">Island</div>
+              <div class="field__item">{{ node.field_island.value|replace({'_': ' '})|title }}</div>
+            </div>
+          {% endif %}
+          {% if node.field_phone.value %}
+            <div class="field">
+              <div class="field__label">Phone</div>
+              <div class="field__item"><a href="tel:{{ node.field_phone.value|replace({'(': '', ')': '', ' ': '', '-': ''}) }}">{{ node.field_phone.value }}</a></div>
+            </div>
+          {% endif %}
+          {% if node.field_address.value %}
+            <div class="field">
+              <div class="field__label">Service area</div>
+              <div class="field__item">{{ node.field_address.value|striptags }}</div>
+            </div>
+          {% endif %}
+          {% if node.field_website.uri %}
+            <div class="field">
+              <div class="field__label">Dealer pathway</div>
+              <div class="field__item"><a href="{{ node.field_website.uri|replace({'internal:': ''}) }}">{{ node.field_website.title ?: 'View dealer options' }}</a></div>
+            </div>
+          {% endif %}
+        </div>
+        <div class="ilf-dealer-detail__actions">
+          <a class="btn-main" href="/find-a-fujitsu-contractor">Find another Fujitsu dealer</a>
+          <a class="btn-main btn-outline" href="/resources">Review Fujitsu resources</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

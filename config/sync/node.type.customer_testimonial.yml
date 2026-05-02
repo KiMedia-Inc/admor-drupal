@@ -1,0 +1,11 @@
+uuid: df9d4e40-0a85-4947-94b4-d0321b5db3a4
+langcode: en
+status: true
+dependencies: {  }
+name: 'Customer Testimonial'
+type: customer_testimonial
+description: 'Customer quotes used as trust proof on Fujitsu authority, comparison, and dealer pages.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

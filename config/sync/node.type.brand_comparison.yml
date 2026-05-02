@@ -1,0 +1,11 @@
+uuid: 2d99602d-9382-437d-8cd7-3cac9a06c095
+langcode: en
+status: true
+dependencies: {  }
+name: 'HVAC Brand Comparison'
+type: brand_comparison
+description: 'Fujitsu comparison pages focused on direct ductless and mini-split competitors in Hawaii.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

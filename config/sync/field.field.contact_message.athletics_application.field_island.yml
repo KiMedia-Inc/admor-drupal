@@ -1,0 +1,21 @@
+uuid: 3f18d828-8c85-42b5-9de1-40cbf03a6e8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.athletics_application
+    - field.storage.contact_message.field_island
+  module:
+    - options
+id: contact_message.athletics_application.field_island
+field_name: field_island
+entity_type: contact_message
+bundle: athletics_application
+label: Island
+description: 'Choose the island this message is about.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,22 @@
+uuid: da581233-a97c-4e69-afa6-7fd6fa5536ab
+langcode: en
+status: false
+dependencies:
+  theme:
+    - ilovemyfujitsu
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: ilovemyfujitsu_secondary_local_tasks
+theme: ilovemyfujitsu
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

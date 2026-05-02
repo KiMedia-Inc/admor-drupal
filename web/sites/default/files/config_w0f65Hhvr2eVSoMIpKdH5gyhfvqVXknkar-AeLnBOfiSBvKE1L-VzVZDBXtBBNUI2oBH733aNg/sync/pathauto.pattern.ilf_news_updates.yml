@@ -1,0 +1,22 @@
+uuid: 0a4c45ac-f1c7-46cf-9698-6651e3719e38
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: ilf_news_updates
+label: 'Fujitsu updates'
+type: 'canonical_entities:node'
+pattern: '/updates/[node:title]'
+selection_criteria:
+  3d067f30-b373-41d6-8682-1144f4d2c1f9:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 3d067f30-b373-41d6-8682-1144f4d2c1f9
+    context_mapping:
+      node: node
+    bundles:
+      news_update: news_update
+selection_logic: and
+weight: -10
+relationships: {  }

@@ -1,0 +1,225 @@
+<?php
+
+declare(strict_types=1);
+
+use Drupal\field\Entity\FieldConfig;
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\node\Entity\NodeType;
+
+/**
+ * Implements hook_install().
+ */
+function ilf_site_install(): void {
+  ilf_site_create_content_types();
+  ilf_site_create_menu_links();
+
+  \Drupal::configFactory()->getEditable('system.site')
+    ->set('page.front', '/home')
+    ->set('name', 'I Love My Fujitsu')
+    ->save();
+}
+
+function ilf_site_create_content_types(): void {
+  $types = [
+    'news_update' => [
+      'name' => 'News / Update',
+      'description' => 'News, rebates, maintenance tips, technical updates, and Fujitsu announcements.',
+    ],
+    'dealer_contractor' => [
+      'name' => 'Dealer / Contractor',
+      'description' => 'Certified Fujitsu dealer or contractor listings grouped by island.',
+    ],
+    'face_profile' => [
+      'name' => 'Face / Profile',
+      'description' => 'Faces of Fujitsu profiles, friends, family, local personalities, and testimonials.',
+    ],
+    'resource_brochure' => [
+      'name' => 'Resource / Brochure',
+      'description' => 'PDFs, brochures, rebate resources, troubleshooting guides, and Fujitsu links.',
+    ],
+    'commercial_video' => [
+      'name' => 'Commercial / Video',
+      'description' => 'Fujitsu commercials, YouTube videos, TV spots, and video resources.',
+    ],
+  ];
+
+  foreach ($types as $id => $definition) {
+    if (!NodeType::load($id)) {
+      $type = NodeType::create([
+        'type' => $id,
+        'name' => $definition['name'],
+        'description' => $definition['description'],
+      ]);
+      $type->save();
+      node_add_body_field($type, 'Body');
+    }
+  }
+
+  ilf_site_add_text_field('news_update', 'field_summary', 'Summary', 'text_long');
+  ilf_site_add_image_field('news_update', 'field_featured_image', 'Featured image');
+  ilf_site_add_link_field('news_update', 'field_external_link', 'External link');
+
+  ilf_site_add_list_field('dealer_contractor', 'field_island', 'Island', [
+    'oahu' => 'Oahu',
+    'kauai' => 'Kauai',
+    'big_island' => 'Big Island',
+    'maui' => 'Maui',
+  ]);
+  ilf_site_add_text_field('dealer_contractor', 'field_phone', 'Phone', 'string');
+  ilf_site_add_text_field('dealer_contractor', 'field_address', 'Address', 'text_long');
+  ilf_site_add_link_field('dealer_contractor', 'field_website', 'Website');
+
+  ilf_site_add_text_field('face_profile', 'field_summary', 'Short bio', 'text_long');
+  ilf_site_add_image_field('face_profile', 'field_profile_image', 'Profile image');
+  ilf_site_add_text_field('face_profile', 'field_role', 'Role / relationship', 'string');
+
+  ilf_site_add_list_field('resource_brochure', 'field_resource_type', 'Resource type', [
+    'brochure' => 'Brochure',
+    'rebate' => 'Rebate',
+    'guide' => 'Guide',
+    'video' => 'Video',
+    'external' => 'External link',
+  ]);
+  ilf_site_add_link_field('resource_brochure', 'field_resource_link', 'Resource link');
+  ilf_site_add_file_field('resource_brochure', 'field_resource_file', 'PDF / file');
+
+  ilf_site_add_link_field('commercial_video', 'field_video_url', 'Video URL');
+  ilf_site_add_image_field('commercial_video', 'field_thumbnail', 'Thumbnail');
+  ilf_site_add_text_field('commercial_video', 'field_summary', 'Summary', 'text_long');
+}
+
+function ilf_site_add_text_field(string $bundle, string $field_name, string $label, string $type): void {
+  if (!FieldStorageConfig::loadByName('node', $field_name)) {
+    FieldStorageConfig::create([
+      'field_name' => $field_name,
+      'entity_type' => 'node',
+      'type' => $type,
+    ])->save();
+  }
+
+  if (!FieldConfig::loadByName('node', $bundle, $field_name)) {
+    FieldConfig::create([
+      'field_name' => $field_name,
+      'entity_type' => 'node',
+      'bundle' => $bundle,
+      'label' => $label,
+    ])->save();
+  }
+}
+
+function ilf_site_add_image_field(string $bundle, string $field_name, string $label): void {
+  if (!FieldStorageConfig::loadByName('node', $field_name)) {
+    FieldStorageConfig::create([
+      'field_name' => $field_name,
+      'entity_type' => 'node',
+      'type' => 'image',
+    ])->save();
+  }
+
+  if (!FieldConfig::loadByName('node', $bundle, $field_name)) {
+    FieldConfig::create([
+      'field_name' => $field_name,
+      'entity_type' => 'node',
+      'bundle' => $bundle,
+      'label' => $label,
+      'settings' => [
+        'alt_field' => TRUE,
+        'alt_field_required' => TRUE,
+      ],
+    ])->save();
+  }
+}
+
+function ilf_site_add_link_field(string $bundle, string $field_name, string $label): void {
+  if (!FieldStorageConfig::loadByName('node', $field_name)) {
+    FieldStorageConfig::create([
+      'field_name' => $field_name,
+      'entity_type' => 'node',
+      'type' => 'link',
+    ])->save();
+  }
+
+  if (!FieldConfig::loadByName('node', $bundle, $field_name)) {
+    FieldConfig::create([
+      'field_name' => $field_name,
+      'entity_type' => 'node',
+      'bundle' => $bundle,
+      'label' => $label,
+    ])->save();
+  }
+}
+
+function ilf_site_add_file_field(string $bundle, string $field_name, string $label): void {
+  if (!FieldStorageConfig::loadByName('node', $field_name)) {
+    FieldStorageConfig::create([
+      'field_name' => $field_name,
+      'entity_type' => 'node',
+      'type' => 'file',
+    ])->save();
+  }
+
+  if (!FieldConfig::loadByName('node', $bundle, $field_name)) {
+    FieldConfig::create([
+      'field_name' => $field_name,
+      'entity_type' => 'node',
+      'bundle' => $bundle,
+      'label' => $label,
+      'settings' => [
+        'file_extensions' => 'pdf doc docx xls xlsx',
+      ],
+    ])->save();
+  }
+}
+
+function ilf_site_add_list_field(string $bundle, string $field_name, string $label, array $allowed_values): void {
+  if (!FieldStorageConfig::loadByName('node', $field_name)) {
+    FieldStorageConfig::create([
+      'field_name' => $field_name,
+      'entity_type' => 'node',
+      'type' => 'list_string',
+      'settings' => [
+        'allowed_values' => $allowed_values,
+      ],
+    ])->save();
+  }
+
+  if (!FieldConfig::loadByName('node', $bundle, $field_name)) {
+    FieldConfig::create([
+      'field_name' => $field_name,
+      'entity_type' => 'node',
+      'bundle' => $bundle,
+      'label' => $label,
+    ])->save();
+  }
+}
+
+function ilf_site_create_menu_links(): void {
+  $links = [
+    ['Home', 'internal:/'],
+    ['Why Fujitsu', 'internal:/why-fujitsu'],
+    ['Find a Contractor', 'internal:/find-a-contractor'],
+    ['Products', 'internal:/products'],
+    ['Commercials', 'internal:/commercials'],
+    ['Resources', 'internal:/resources'],
+    ['Updates', 'internal:/updates'],
+    ['Friends & Family', 'internal:/friends-family'],
+  ];
+
+  foreach ($links as $weight => [$title, $uri]) {
+    $existing = \Drupal::entityTypeManager()->getStorage('menu_link_content')->loadByProperties([
+      'menu_name' => 'main',
+      'title' => $title,
+    ]);
+    if ($existing) {
+      continue;
+    }
+
+    MenuLinkContent::create([
+      'title' => $title,
+      'menu_name' => 'main',
+      'link' => ['uri' => $uri],
+      'weight' => $weight,
+    ])->save();
+  }
+}

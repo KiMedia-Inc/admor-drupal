@@ -1,0 +1,16 @@
+uuid: 9326dd80-e381-4487-be4f-355f00cfdbe2
+langcode: en
+status: true
+dependencies: {  }
+id: node__brand_comparison
+label: 'Brand Comparison'
+tags:
+  title: '[node:title] | I Love My Fujitsu'
+  description: '[node:field_comparison_summary]'
+  canonical_url: '[node:url]'
+  robots: 'index, follow'
+  og_site_name: 'I Love My Fujitsu'
+  og_title: '[node:title] | I Love My Fujitsu'
+  og_description: '[node:field_comparison_summary]'
+  og_type: article
+  og_image: 'https://ilovemyfujitsu.com/themes/custom/ilovemyfujitsu/assets/images/fujitsu-logo.png'

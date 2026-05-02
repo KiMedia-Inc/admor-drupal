@@ -1,0 +1,23 @@
+uuid: f14f9a61-055e-4542-b035-566180b485a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sort_order
+    - node.type.branch_location
+id: node.branch_location.field_sort_order
+field_name: field_sort_order
+entity_type: node
+bundle: branch_location
+label: 'Sort order'
+description: 'Lower numbers appear first.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

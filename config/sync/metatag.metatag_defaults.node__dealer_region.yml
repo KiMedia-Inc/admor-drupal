@@ -1,0 +1,16 @@
+uuid: 2e6544cc-76d5-463d-9a76-ce27e202e062
+langcode: en
+status: true
+dependencies: {  }
+id: node__dealer_region
+label: 'Dealer Region'
+tags:
+  title: '[node:title] | Find Fujitsu Contractors in Hawaii'
+  description: 'Find Fujitsu contractor support for [node:title] and ask your AC installer to quote Fujitsu by name.'
+  canonical_url: '[node:url]'
+  robots: 'index, follow'
+  og_site_name: 'I Love My Fujitsu'
+  og_title: '[node:title] | Fujitsu Hawaii Contractor Support'
+  og_description: 'Choose your island, compare Fujitsu, and find contractor support for Hawaii homes and businesses.'
+  og_type: article
+  og_image: 'https://ilovemyfujitsu.com/themes/custom/ilovemyfujitsu/assets/images/fujitsu-logo.png'

@@ -1,0 +1,11 @@
+uuid: 6e8adc7c-e3a7-4e66-a924-a2dd490d91f4
+langcode: en
+status: true
+dependencies: {  }
+name: 'Branch / Location'
+type: branch_location
+description: 'Admor/Fujitsu branch and location information.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

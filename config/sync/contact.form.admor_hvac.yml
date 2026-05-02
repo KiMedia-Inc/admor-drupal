@@ -1,0 +1,12 @@
+uuid: 03abe5da-82b3-42b4-9e77-3fe0c6da691a
+langcode: en
+status: true
+dependencies: {  }
+id: admor_hvac
+label: 'Contact Admor HVAC'
+recipients:
+  - admin@example.com
+reply: ''
+weight: 0
+message: 'Mahalo! We’ll be in touch soon.'
+redirect: ''

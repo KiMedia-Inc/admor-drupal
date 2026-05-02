@@ -1,0 +1,47 @@
+uuid: 2d432ed7-33b8-4d4d-8c14-839f6d11dbaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.brand_comparison.body
+    - field.field.node.brand_comparison.field_comparison_summary
+    - field.field.node.brand_comparison.field_competitor_brand
+    - field.field.node.brand_comparison.field_sort_order
+    - node.type.brand_comparison
+  module:
+    - text
+    - user
+id: node.brand_comparison.default
+targetEntityType: node
+bundle: brand_comparison
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_comparison_summary:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_competitor_brand:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_sort_order: true

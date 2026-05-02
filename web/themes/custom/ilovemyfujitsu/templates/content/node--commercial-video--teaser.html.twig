@@ -1,0 +1,19 @@
+<article{{ attributes.addClass('ilf-teaser-card', 'ilf-teaser-card--video') }}>
+  {% if node.field_thumbnail.target_id and node.field_thumbnail.entity %}
+    <img
+      src="{{ file_url(node.field_thumbnail.entity.uri.value) }}"
+      alt="{{ node.field_thumbnail.alt ?: (label|render|striptags ~ ' commercial thumbnail') }}"
+      loading="lazy"
+    >
+  {% endif %}
+  <div class="ilf-teaser-card__body">
+    <p class="ilf-teaser-card__type">Commercial</p>
+    <h2><a href="{{ url }}">{{ label }}</a></h2>
+    {% if node.field_summary.value %}
+      <p>{{ node.field_summary.value|striptags }}</p>
+    {% else %}
+      {{ content.body }}
+    {% endif %}
+    <a class="ilf-teaser-card__link" href="{{ url }}">Watch details</a>
+  </div>
+</article>

@@ -1,0 +1,20 @@
+uuid: bb3cbb24-5b8b-4a56-b914-822016ab259a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_sort_order
+field_name: field_sort_order
+entity_type: block_content
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
