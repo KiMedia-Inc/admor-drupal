@@ -1,9 +1,0 @@
-uuid: cea1a9a4-5aaa-4ea3-bcd5-768cb3743ec7
-langcode: en
-status: true
-dependencies: {  }
-name: 'Resource Type'
-vid: resource_type
-description: null
-weight: 0
-new_revision: false

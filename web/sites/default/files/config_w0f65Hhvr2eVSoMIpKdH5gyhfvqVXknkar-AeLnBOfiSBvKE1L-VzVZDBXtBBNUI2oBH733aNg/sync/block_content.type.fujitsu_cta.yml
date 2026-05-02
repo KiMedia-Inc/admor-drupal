@@ -1,8 +1,0 @@
-uuid: 4a38b94a-89e5-49e6-8512-eecfe547ca15
-langcode: en
-status: true
-dependencies: {  }
-id: fujitsu_cta
-label: 'Fujitsu CTA Block'
-revision: true
-description: null
